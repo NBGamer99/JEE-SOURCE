@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Confirmation</title>
+  <link rel="icon" th:href="@{images/ensalogo.png}" type="image/x-icon">
+  <link rel="stylesheet" th:href="@{css/style.css}">
+</head>
+<body>
+<div class="row">
+  <div class="col-left">
+    <img th:src="@{images/Success.gif}" class="success-img">
+    <div class="field-group">
+      <input type="text" id="FirstName" name="FirstName" class="input-field" placeholder="First Name"
+             autocomplete="off" th:value="${reg.student.FirstName}" disabled>
+      <label for="FirstName" class="input-label">First Name</label>
+    </div>
+    <div class="field-group">
+      <input type="text" id="LastName" name="LastName" class="input-field" placeholder="Last Name"
+             autocomplete="off" th:value="${reg.student.LastName}" disabled>
+      <label for="LastName" class="input-label">Last Name</label>
+    </div>
+    <div class="field-group">
+      <input type="text" id="Email" name="Email" class="input-field" placeholder="Email" autocomplete="off"
+             th:value="${reg.student.Email}"
+             disabled>
+      <label for="Email" class="input-label">Email</label>
+    </div>
+    <div class="field-group">
+      <input type="text" id="BirthDate" name="BirthDate" class="input-field" placeholder="Birth Date"
+             autocomplete="off" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'"
+             value="${reg.student.BirthDate}"
+             disabled>
+      <label for="BirthDate" class="input-label">Birth Date</label>
+    </div>
+    <div class="field-group">
+      <input type="text" id="CIN" name="CIN" class="input-field" placeholder="CIN" autocomplete="off"
+             th:value="${reg.student.CIN}"
+             disabled>
+      <label for="CIN" class="input-label">CIN</label>
+    </div>
+  </div>
+  <div class="col-right">
+    <div class="success-title">Registration Success</div>
+    <div class="field-group">
+      <input type="text" id="PhoneNumber" name="PhoneNumber" class="input-field" placeholder="Phone Number"
+             autocomplete="off" pattern="[0-9]{10}" th:value="${reg.student.PhoneNumber}" disabled>
+      <label for="PhoneNumber" class="input-label">Phone Number</label>
+    </div>
+    <div class="field-group">
+      <input type="text" id="RegDate" name="RegDate" class="input-field" placeholder="RegDate"
+             autocomplete="off" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'"
+             th:value="${reg.RegDate}"
+             disabled>
+      <label for="RegDate" class="input-label">Registration Date</label>
+    </div>
+    <div class="field-group">
+      <input type="text" id="Grouped" name="Grouped" class="input-field" placeholder="Group" autocomplete="off"
+             th:value="${reg.Grouped}"
+             disabled>
+      <label for="Grouped" class="input-label">Group</label>
+    </div>
+    <div class="field-group">
+      <input type="text" id="Major" name="Major" class="input-field" placeholder="Major" autocomplete="off"
+             th:value="${reg.Major}"
+             disabled>
+      <label for="Major" class="input-label">Major</label>
+    </div>
+    <div class="field-group">
+      <input type="text" id="Level" name="Level" class="input-field" placeholder="Level" autocomplete="off"
+             th:value="${reg.Level}"
+             disabled>
+      <label for="Level" class="input-label">Level</label>
+    </div>
+  </div>
+</div>
+<script th:src="@{js/app.js}"></script>
+</body>
+</html>
+

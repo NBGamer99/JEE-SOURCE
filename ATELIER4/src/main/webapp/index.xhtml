@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+>
+<h:head>
+    <meta content=""/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Student Registration</title>
+    <link rel="icon" href="./static/images/ensalogo.png" type="image/x-icon"/>
+    <link href="static/css/stylesheet.css" rel="stylesheet"/>
+</h:head>
+<h:body>
+    <h:graphicImage value="static/images/ensalogo.png" id="ensalogo"/>
+    <h2>Students Registration</h2>
+    <h:form>
+        <div class="field-group">
+            <h:inputText value="#{studentBean.firstName}" id="firstname" name="firstname" class="input-field"
+                         placeholder="First Name" autocomplete="off" required="true"/>
+            <h:outputLabel for="firstname" class="input-label">First Name</h:outputLabel>
+        </div>
+        <div class="field-group">
+            <h:inputText value="#{studentBean.lastName}" id="lastname" name="lastname" class="input-field"
+                         placeholder="Last Name" autocomplete="off" required="true"/>
+            <h:outputLabel for="lastname" class="input-label">Last Name</h:outputLabel>
+        </div>
+        <div class="field-group">
+            <h:inputText value="#{studentBean.email}" id="email" name="email" class="input-field" placeholder="Email"
+                         autocomplete="off" required="true"/>
+            <h:outputLabel for="email" class="input-label">Email</h:outputLabel>
+        </div>
+        <div class="field-group">
+            <h:outputLabel for="birthdate" class="input-label">BirthDate</h:outputLabel>
+            <p:datePicker onblur="if(!this.value)this.type='text'" onfocus="(this.type='date')" id="birthdate" name="birthdate" class="input-field"
+                              value="#{studentBean.birthDate}"/>
+        </div>
+        <div class="field-group">
+            <h:inputText value="#{studentBean.CIN}" id="CIN" name="CIN" class="input-field" placeholder="CIN" autocomplete="off" required="true"/>
+            <h:outputLabel for="CIN" class="input-label">CIN</h:outputLabel>
+        </div>
+        <div class="field-group">
+            <h:inputText value="#{studentBean.phoneNumber}" id="PhoneNumber" name="PhoneNumber" class="input-field"
+                         placeholder="Phone Number" autocomplete="off" pattern="[0-9]{10}" required="true"/>
+            <h:outputLabel for="PhoneNumber" class="input-label">Phone Number</h:outputLabel>
+        </div>
+        <h:commandButton type="submit" value="Submit" id="submit" class="btn" action="#{studentBean.saveStudent()}"/>
+    </h:form>
+    <div class="error-msg" id="error-msg">Please fill all the fields.</div>
+    <script src="./static/js/app.js" type=""></script>
+</h:body>
+</html>

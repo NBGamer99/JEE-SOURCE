@@ -1,0 +1,1116 @@
+[INFO ] 26-04-2023 08:20:09.466 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 26-04-2023 08:20:09.500 [main] Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[INFO ] 26-04-2023 08:20:09.641 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[WARN ] 26-04-2023 08:20:09.740 [main] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 26-04-2023 08:20:09.742 [main] pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://localhost:3306/ATELIER2?createDatabaseIfNotExist=true]
+[INFO ] 26-04-2023 08:20:09.743 [main] pooling - HHH10001001: Connection properties: {password=****, user=abmola}
+[INFO ] 26-04-2023 08:20:09.743 [main] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 26-04-2023 08:20:09.744 [main] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 26-04-2023 08:20:09.820 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB10Dialect
+[DEBUG] 26-04-2023 08:20:10.275 [main] SQL - alter table registration drop foreign key if exists FK25ucw75sqymkkwjugi3pu0nar
+[INFO ] 26-04-2023 08:20:10.276 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@551e4c6d] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 08:20:10.556 [main] SQL - drop table if exists registration
+[DEBUG] 26-04-2023 08:20:10.667 [main] SQL - drop table if exists student
+[DEBUG] 26-04-2023 08:20:10.836 [main] SQL - create table registration (Id_reg bigint not null auto_increment, Grouped varchar(30), Level varchar(30), Major varchar(30), RegDate datetime(6), Student_id bigint, primary key (Id_reg)) engine=InnoDB
+[INFO ] 26-04-2023 08:20:10.837 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7c011174] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 08:20:10.967 [main] SQL - create table student (Id_std bigint not null, CIN varchar(20), FirstName varchar(20), LastName varchar(20), primary key (Id_std)) engine=InnoDB
+[DEBUG] 26-04-2023 08:20:11.179 [main] SQL - alter table registration add constraint FK25ucw75sqymkkwjugi3pu0nar foreign key (Student_id) references student (Id_std)
+[INFO ] 26-04-2023 08:20:11.650 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[DEBUG] 26-04-2023 08:20:11.891 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 08:20:11.898 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 08:20:11.899 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 08:20:11.954 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_
+[DEBUG] 26-04-2023 08:20:11.977 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[INFO ] 26-04-2023 08:22:19.150 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 26-04-2023 08:22:19.199 [main] Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[INFO ] 26-04-2023 08:22:19.377 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[WARN ] 26-04-2023 08:22:19.540 [main] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 26-04-2023 08:22:19.543 [main] pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://localhost:3306/ATELIER2?createDatabaseIfNotExist=true]
+[INFO ] 26-04-2023 08:22:19.544 [main] pooling - HHH10001001: Connection properties: {password=****, user=abmola}
+[INFO ] 26-04-2023 08:22:19.544 [main] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 26-04-2023 08:22:19.546 [main] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 26-04-2023 08:22:19.647 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB10Dialect
+[DEBUG] 26-04-2023 08:22:20.224 [main] SQL - alter table registration drop foreign key if exists FK25ucw75sqymkkwjugi3pu0nar
+[INFO ] 26-04-2023 08:22:20.226 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@551e4c6d] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 08:22:20.561 [main] SQL - drop table if exists registration
+[DEBUG] 26-04-2023 08:22:20.804 [main] SQL - drop table if exists student
+[DEBUG] 26-04-2023 08:22:21.230 [main] SQL - create table registration (Id_reg bigint not null auto_increment, Grouped varchar(30), Level varchar(30), Major varchar(30), RegDate datetime(6), Student_id bigint, primary key (Id_reg)) engine=InnoDB
+[INFO ] 26-04-2023 08:22:21.230 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7c011174] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 08:22:21.361 [main] SQL - create table student (Id_std bigint not null, CIN varchar(20), FirstName varchar(20), LastName varchar(20), primary key (Id_std)) engine=InnoDB
+[DEBUG] 26-04-2023 08:22:21.561 [main] SQL - alter table registration add constraint FK25ucw75sqymkkwjugi3pu0nar foreign key (Student_id) references student (Id_std)
+[INFO ] 26-04-2023 08:22:22.088 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[DEBUG] 26-04-2023 08:22:22.200 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 08:22:22.206 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 08:22:22.206 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 08:22:22.330 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_
+[DEBUG] 26-04-2023 08:22:22.349 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 08:22:22.354 [main] SQL - select student_.Id_std, student_.CIN as cin2_1_, student_.FirstName as firstnam3_1_, student_.LastName as lastname4_1_ from student student_ where student_.Id_std=?
+[DEBUG] 26-04-2023 08:22:22.356 [main] SQL - insert into registration (Grouped, Level, Major, RegDate) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 08:22:22.381 [main] SQL - insert into registration (Grouped, Level, Major, RegDate) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 08:22:22.382 [main] SQL - insert into registration (Grouped, Level, Major, RegDate) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 08:22:22.392 [main] SQL - select registrati0_.Id_reg as id_reg1_0_, registrati0_.Grouped as grouped2_0_, registrati0_.Level as level3_0_, registrati0_.Major as major4_0_, registrati0_.RegDate as regdate5_0_, registrati0_.Student_id as student_6_0_ from registration registrati0_ where registrati0_.Student_id=?
+[DEBUG] 26-04-2023 08:22:22.417 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 08:22:22.420 [main] SQL - select re0_.Student_id as student_6_0_0_, re0_.Id_reg as id_reg1_0_0_, re0_.Id_reg as id_reg1_0_1_, re0_.Grouped as grouped2_0_1_, re0_.Level as level3_0_1_, re0_.Major as major4_0_1_, re0_.RegDate as regdate5_0_1_, re0_.Student_id as student_6_0_1_ from registration re0_ where re0_.Student_id=?
+[DEBUG] 26-04-2023 08:22:22.424 [main] SQL - delete from student where Id_std=?
+[DEBUG] 26-04-2023 08:22:22.469 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 08:22:22.471 [main] SQL - update student set CIN=?, FirstName=?, LastName=? where Id_std=?
+[DEBUG] 26-04-2023 08:22:22.535 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_ where student0_.Id_std=(select registrati1_.Student_id from registration registrati1_ where registrati1_.Level=?)
+[INFO ] 26-04-2023 08:25:16.228 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 26-04-2023 08:25:16.265 [main] Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[INFO ] 26-04-2023 08:25:16.404 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[WARN ] 26-04-2023 08:25:16.537 [main] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 26-04-2023 08:25:16.540 [main] pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://localhost:3306/ATELIER2?createDatabaseIfNotExist=true]
+[INFO ] 26-04-2023 08:25:16.540 [main] pooling - HHH10001001: Connection properties: {password=****, user=abmola}
+[INFO ] 26-04-2023 08:25:16.541 [main] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 26-04-2023 08:25:16.542 [main] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 26-04-2023 08:25:16.613 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB10Dialect
+[DEBUG] 26-04-2023 08:25:17.051 [main] SQL - alter table registration drop foreign key if exists FK25ucw75sqymkkwjugi3pu0nar
+[INFO ] 26-04-2023 08:25:17.053 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@551e4c6d] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 08:25:17.301 [main] SQL - drop table if exists registration
+[DEBUG] 26-04-2023 08:25:17.479 [main] SQL - drop table if exists student
+[DEBUG] 26-04-2023 08:25:17.592 [main] SQL - create table registration (Id_reg bigint not null auto_increment, Grouped varchar(30), Level varchar(30), Major varchar(30), RegDate datetime(6), Student_id bigint, primary key (Id_reg)) engine=InnoDB
+[INFO ] 26-04-2023 08:25:17.593 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7c011174] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 08:25:17.801 [main] SQL - create table student (Id_std bigint not null, CIN varchar(20), FirstName varchar(20), LastName varchar(20), primary key (Id_std)) engine=InnoDB
+[DEBUG] 26-04-2023 08:25:17.957 [main] SQL - alter table registration add constraint FK25ucw75sqymkkwjugi3pu0nar foreign key (Student_id) references student (Id_std)
+[INFO ] 26-04-2023 08:25:18.415 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[DEBUG] 26-04-2023 08:25:18.627 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 08:25:18.634 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 08:25:18.634 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 08:25:18.776 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_
+[DEBUG] 26-04-2023 08:25:18.796 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 08:25:18.803 [main] SQL - select student_.Id_std, student_.CIN as cin2_1_, student_.FirstName as firstnam3_1_, student_.LastName as lastname4_1_ from student student_ where student_.Id_std=?
+[DEBUG] 26-04-2023 08:25:18.804 [main] SQL - insert into registration (Grouped, Level, Major, RegDate) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 08:25:18.822 [main] SQL - insert into registration (Grouped, Level, Major, RegDate) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 08:25:18.823 [main] SQL - insert into registration (Grouped, Level, Major, RegDate) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 08:25:18.833 [main] SQL - select registrati0_.Id_reg as id_reg1_0_, registrati0_.Grouped as grouped2_0_, registrati0_.Level as level3_0_, registrati0_.Major as major4_0_, registrati0_.RegDate as regdate5_0_, registrati0_.Student_id as student_6_0_ from registration registrati0_ where registrati0_.Student_id=?
+[DEBUG] 26-04-2023 08:25:18.838 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 08:25:18.842 [main] SQL - select re0_.Student_id as student_6_0_0_, re0_.Id_reg as id_reg1_0_0_, re0_.Id_reg as id_reg1_0_1_, re0_.Grouped as grouped2_0_1_, re0_.Level as level3_0_1_, re0_.Major as major4_0_1_, re0_.RegDate as regdate5_0_1_, re0_.Student_id as student_6_0_1_ from registration re0_ where re0_.Student_id=?
+[DEBUG] 26-04-2023 08:25:18.849 [main] SQL - delete from student where Id_std=?
+[DEBUG] 26-04-2023 08:25:18.866 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 08:25:18.868 [main] SQL - update student set CIN=?, FirstName=?, LastName=? where Id_std=?
+[DEBUG] 26-04-2023 08:25:18.876 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_ where student0_.Id_std=(select registrati1_.Student_id from registration registrati1_ where registrati1_.Level=?)
+[INFO ] 26-04-2023 08:26:52.046 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 26-04-2023 08:26:52.095 [main] Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[INFO ] 26-04-2023 08:26:52.253 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[WARN ] 26-04-2023 08:26:52.416 [main] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 26-04-2023 08:26:52.421 [main] pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://localhost:3306/ATELIER2?createDatabaseIfNotExist=true]
+[INFO ] 26-04-2023 08:26:52.421 [main] pooling - HHH10001001: Connection properties: {password=****, user=abmola}
+[INFO ] 26-04-2023 08:26:52.422 [main] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 26-04-2023 08:26:52.424 [main] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 26-04-2023 08:26:52.521 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB10Dialect
+[DEBUG] 26-04-2023 08:26:52.954 [main] SQL - alter table registration drop foreign key if exists FK25ucw75sqymkkwjugi3pu0nar
+[INFO ] 26-04-2023 08:26:52.955 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@551e4c6d] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 08:26:53.216 [main] SQL - drop table if exists registration
+[DEBUG] 26-04-2023 08:26:53.327 [main] SQL - drop table if exists student
+[DEBUG] 26-04-2023 08:26:53.541 [main] SQL - create table registration (Id_reg bigint not null auto_increment, Grouped varchar(30), Level varchar(30), Major varchar(30), RegDate datetime(6), Student_id bigint, primary key (Id_reg)) engine=InnoDB
+[INFO ] 26-04-2023 08:26:53.542 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7c011174] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 08:26:53.727 [main] SQL - create table student (Id_std bigint not null, CIN varchar(20), FirstName varchar(20), LastName varchar(20), primary key (Id_std)) engine=InnoDB
+[DEBUG] 26-04-2023 08:26:53.938 [main] SQL - alter table registration add constraint FK25ucw75sqymkkwjugi3pu0nar foreign key (Student_id) references student (Id_std)
+[INFO ] 26-04-2023 08:26:54.468 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[DEBUG] 26-04-2023 08:26:54.683 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 08:26:54.689 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 08:26:54.689 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 08:26:54.757 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_
+[DEBUG] 26-04-2023 08:26:54.775 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 08:26:54.782 [main] SQL - select student_.Id_std, student_.CIN as cin2_1_, student_.FirstName as firstnam3_1_, student_.LastName as lastname4_1_ from student student_ where student_.Id_std=?
+[DEBUG] 26-04-2023 08:26:54.783 [main] SQL - insert into registration (Grouped, Level, Major, RegDate) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 08:26:54.847 [main] SQL - insert into registration (Grouped, Level, Major, RegDate) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 08:26:54.848 [main] SQL - insert into registration (Grouped, Level, Major, RegDate) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 08:26:54.872 [main] SQL - select registrati0_.Id_reg as id_reg1_0_, registrati0_.Grouped as grouped2_0_, registrati0_.Level as level3_0_, registrati0_.Major as major4_0_, registrati0_.RegDate as regdate5_0_, registrati0_.Student_id as student_6_0_ from registration registrati0_ where registrati0_.Student_id=?
+[DEBUG] 26-04-2023 08:26:54.876 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 08:26:54.880 [main] SQL - select re0_.Student_id as student_6_0_0_, re0_.Id_reg as id_reg1_0_0_, re0_.Id_reg as id_reg1_0_1_, re0_.Grouped as grouped2_0_1_, re0_.Level as level3_0_1_, re0_.Major as major4_0_1_, re0_.RegDate as regdate5_0_1_, re0_.Student_id as student_6_0_1_ from registration re0_ where re0_.Student_id=?
+[DEBUG] 26-04-2023 08:26:54.887 [main] SQL - delete from student where Id_std=?
+[DEBUG] 26-04-2023 08:26:54.906 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 08:26:54.911 [main] SQL - update student set CIN=?, FirstName=?, LastName=? where Id_std=?
+[DEBUG] 26-04-2023 08:26:54.927 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_ where student0_.Id_std=(select registrati1_.Student_id from registration registrati1_ where registrati1_.Level=?)
+[INFO ] 26-04-2023 08:27:39.237 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 26-04-2023 08:27:39.272 [main] Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[INFO ] 26-04-2023 08:27:39.414 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[WARN ] 26-04-2023 08:27:39.540 [main] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 26-04-2023 08:27:39.542 [main] pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://localhost:3306/ATELIER2?createDatabaseIfNotExist=true]
+[INFO ] 26-04-2023 08:27:39.543 [main] pooling - HHH10001001: Connection properties: {password=****, user=abmola}
+[INFO ] 26-04-2023 08:27:39.543 [main] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 26-04-2023 08:27:39.545 [main] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 26-04-2023 08:27:39.623 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB10Dialect
+[DEBUG] 26-04-2023 08:27:40.140 [main] SQL - alter table registration drop foreign key if exists FK25ucw75sqymkkwjugi3pu0nar
+[INFO ] 26-04-2023 08:27:40.142 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@551e4c6d] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 08:27:40.484 [main] SQL - drop table if exists registration
+[DEBUG] 26-04-2023 08:27:40.695 [main] SQL - drop table if exists student
+[DEBUG] 26-04-2023 08:27:40.820 [main] SQL - create table registration (Id_reg bigint not null auto_increment, Grouped varchar(30), Level varchar(30), Major varchar(30), RegDate datetime(6), Student_id bigint, primary key (Id_reg)) engine=InnoDB
+[INFO ] 26-04-2023 08:27:40.820 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7c011174] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 08:27:40.973 [main] SQL - create table student (Id_std bigint not null, CIN varchar(20), FirstName varchar(20), LastName varchar(20), primary key (Id_std)) engine=InnoDB
+[DEBUG] 26-04-2023 08:27:41.229 [main] SQL - alter table registration add constraint FK25ucw75sqymkkwjugi3pu0nar foreign key (Student_id) references student (Id_std)
+[INFO ] 26-04-2023 08:27:41.766 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[DEBUG] 26-04-2023 08:27:41.946 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 08:27:41.952 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 08:27:41.953 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 08:27:42.005 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_
+[DEBUG] 26-04-2023 08:27:42.022 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 08:27:42.028 [main] SQL - select student_.Id_std, student_.CIN as cin2_1_, student_.FirstName as firstnam3_1_, student_.LastName as lastname4_1_ from student student_ where student_.Id_std=?
+[DEBUG] 26-04-2023 08:27:42.029 [main] SQL - insert into registration (Grouped, Level, Major, RegDate) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 08:27:42.070 [main] SQL - insert into registration (Grouped, Level, Major, RegDate) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 08:27:42.071 [main] SQL - insert into registration (Grouped, Level, Major, RegDate) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 08:27:42.096 [main] SQL - select registrati0_.Id_reg as id_reg1_0_, registrati0_.Grouped as grouped2_0_, registrati0_.Level as level3_0_, registrati0_.Major as major4_0_, registrati0_.RegDate as regdate5_0_, registrati0_.Student_id as student_6_0_ from registration registrati0_ where registrati0_.Student_id=?
+[DEBUG] 26-04-2023 08:27:42.099 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 08:27:42.103 [main] SQL - select re0_.Student_id as student_6_0_0_, re0_.Id_reg as id_reg1_0_0_, re0_.Id_reg as id_reg1_0_1_, re0_.Grouped as grouped2_0_1_, re0_.Level as level3_0_1_, re0_.Major as major4_0_1_, re0_.RegDate as regdate5_0_1_, re0_.Student_id as student_6_0_1_ from registration re0_ where re0_.Student_id=?
+[DEBUG] 26-04-2023 08:27:42.107 [main] SQL - delete from student where Id_std=?
+[DEBUG] 26-04-2023 08:27:42.118 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 08:27:42.119 [main] SQL - update student set CIN=?, FirstName=?, LastName=? where Id_std=?
+[DEBUG] 26-04-2023 08:27:42.128 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_ where student0_.Id_std=(select registrati1_.Student_id from registration registrati1_ where registrati1_.Level=?)
+[INFO ] 26-04-2023 14:04:57.286 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 26-04-2023 14:04:57.316 [main] Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[INFO ] 26-04-2023 14:04:57.426 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[WARN ] 26-04-2023 14:04:57.573 [main] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 26-04-2023 14:04:57.576 [main] pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://localhost:3306/ATELIER2?createDatabaseIfNotExist=true]
+[INFO ] 26-04-2023 14:04:57.577 [main] pooling - HHH10001001: Connection properties: {password=****, user=abmola}
+[INFO ] 26-04-2023 14:04:57.577 [main] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 26-04-2023 14:04:57.579 [main] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[WARN ] 26-04-2023 14:04:57.637 [main] JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query metadata
+java.lang.IllegalStateException: Cannot get a connection as the driver manager is not properly initialized
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.getConnection(DriverManagerConnectionProviderImpl.java:172) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:181) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) [hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) [hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) [hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) [hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) [hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) [hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:51) [hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:107) [hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:246) [hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) [hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.convertSqlException(BasicConnectionCreator.java:116) [hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverConnectionCreator.makeConnection(DriverConnectionCreator.java:41) [hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.createConnection(BasicConnectionCreator.java:58) [hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.addConnections(DriverManagerConnectionProviderImpl.java:409) [hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(DriverManagerConnectionProviderImpl.java:275) [hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(DriverManagerConnectionProviderImpl.java:249) [hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections$Builder.build(DriverManagerConnectionProviderImpl.java:453) [hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildPool(DriverManagerConnectionProviderImpl.java:98) [hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure(DriverManagerConnectionProviderImpl.java:73) [hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:107) [hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:246) [hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) [hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.buildJdbcConnectionAccess(JdbcEnvironmentInitiator.java:146) [hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:66) [hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) [hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) [hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) [hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) [hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) [hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:178) [hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) [hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) [hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) [hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:175) [hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127) [hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1460) [hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1494) [hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.jpa.HibernatePersistenceProvider.createEntityManagerFactory(HibernatePersistenceProvider.java:56) [hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:79) [javax.persistence-api-2.2.jar:2.2]
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:54) [javax.persistence-api-2.2.jar:2.2]
+	at com.ynabouzi.atelier2.manager.EntityManagerHelper.<clinit>(EntityManagerHelper.java:10) [classes/:?]
+	at com.ynabouzi.atelier2.controllers.StudentDAO.CreateAll(StudentDAO.java:20) [classes/:?]
+	at com.ynabouzi.atelier2.main.main(main.java:29) [classes/:?]
+[INFO ] 26-04-2023 14:04:57.653 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB10Dialect
+[WARN ] 26-04-2023 14:04:57.663 [main] SqlExceptionHelper - SQL Error: 0, SQLState: 08000
+[ERROR] 26-04-2023 14:04:57.663 [main] SqlExceptionHelper - Socket fail to connect to host:address=(host=localhost)(port=3306)(type=primary). Connection refused
+[INFO ] 26-04-2023 14:05:39.811 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 26-04-2023 14:05:39.848 [main] Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[INFO ] 26-04-2023 14:05:40.015 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[WARN ] 26-04-2023 14:05:40.163 [main] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 26-04-2023 14:05:40.167 [main] pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://localhost:3306/ATELIER2?createDatabaseIfNotExist=true]
+[INFO ] 26-04-2023 14:05:40.167 [main] pooling - HHH10001001: Connection properties: {password=****, user=abmola}
+[INFO ] 26-04-2023 14:05:40.168 [main] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 26-04-2023 14:05:40.170 [main] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 26-04-2023 14:05:40.313 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB10Dialect
+[DEBUG] 26-04-2023 14:05:40.771 [main] SQL - alter table registration drop foreign key if exists FK25ucw75sqymkkwjugi3pu0nar
+[INFO ] 26-04-2023 14:05:40.772 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@551e4c6d] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 14:05:41.131 [main] SQL - drop table if exists registration
+[DEBUG] 26-04-2023 14:05:41.431 [main] SQL - drop table if exists student
+[DEBUG] 26-04-2023 14:05:41.578 [main] SQL - create table registration (Id_reg bigint not null auto_increment, Grouped varchar(30), Level varchar(30), Major varchar(30), RegDate datetime(6), Student_id bigint, primary key (Id_reg)) engine=InnoDB
+[INFO ] 26-04-2023 14:05:41.578 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7c011174] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 14:05:42.353 [main] SQL - create table student (Id_std bigint not null, CIN varchar(20), FirstName varchar(20), LastName varchar(20), primary key (Id_std)) engine=InnoDB
+[DEBUG] 26-04-2023 14:05:42.509 [main] SQL - alter table registration add constraint FK25ucw75sqymkkwjugi3pu0nar foreign key (Student_id) references student (Id_std)
+[INFO ] 26-04-2023 14:05:43.078 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[DEBUG] 26-04-2023 14:05:43.291 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:05:43.298 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:05:43.299 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:05:43.335 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_
+[DEBUG] 26-04-2023 14:05:43.352 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:05:43.370 [main] SQL - select student_.Id_std, student_.CIN as cin2_1_, student_.FirstName as firstnam3_1_, student_.LastName as lastname4_1_ from student student_ where student_.Id_std=?
+[DEBUG] 26-04-2023 14:05:43.371 [main] SQL - insert into registration (Grouped, Level, Major, RegDate) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:05:43.394 [main] SQL - insert into registration (Grouped, Level, Major, RegDate) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:05:43.395 [main] SQL - insert into registration (Grouped, Level, Major, RegDate) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:05:43.405 [main] SQL - select registrati0_.Id_reg as id_reg1_0_, registrati0_.Grouped as grouped2_0_, registrati0_.Level as level3_0_, registrati0_.Major as major4_0_, registrati0_.RegDate as regdate5_0_, registrati0_.Student_id as student_6_0_ from registration registrati0_ where registrati0_.Student_id=?
+[DEBUG] 26-04-2023 14:05:43.409 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:05:43.412 [main] SQL - select re0_.Student_id as student_6_0_0_, re0_.Id_reg as id_reg1_0_0_, re0_.Id_reg as id_reg1_0_1_, re0_.Grouped as grouped2_0_1_, re0_.Level as level3_0_1_, re0_.Major as major4_0_1_, re0_.RegDate as regdate5_0_1_, re0_.Student_id as student_6_0_1_ from registration re0_ where re0_.Student_id=?
+[DEBUG] 26-04-2023 14:05:43.416 [main] SQL - delete from student where Id_std=?
+[DEBUG] 26-04-2023 14:05:43.426 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:05:43.428 [main] SQL - update student set CIN=?, FirstName=?, LastName=? where Id_std=?
+[DEBUG] 26-04-2023 14:05:43.437 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_ where student0_.Id_std=(select registrati1_.Student_id from registration registrati1_ where registrati1_.Level=?)
+[INFO ] 26-04-2023 14:13:46.483 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 26-04-2023 14:13:46.521 [main] Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[INFO ] 26-04-2023 14:13:46.661 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[WARN ] 26-04-2023 14:13:46.782 [main] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 26-04-2023 14:13:46.785 [main] pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://localhost:3306/ATELIER2?createDatabaseIfNotExist=true]
+[INFO ] 26-04-2023 14:13:46.785 [main] pooling - HHH10001001: Connection properties: {password=****, user=abmola}
+[INFO ] 26-04-2023 14:13:46.786 [main] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 26-04-2023 14:13:46.788 [main] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 26-04-2023 14:13:46.861 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB10Dialect
+[DEBUG] 26-04-2023 14:13:47.303 [main] SQL - alter table registration drop foreign key if exists FK25ucw75sqymkkwjugi3pu0nar
+[INFO ] 26-04-2023 14:13:47.304 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@59c70ceb] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 14:13:47.905 [main] SQL - drop table if exists registration
+[DEBUG] 26-04-2023 14:13:48.049 [main] SQL - drop table if exists student
+[DEBUG] 26-04-2023 14:13:48.240 [main] SQL - create table registration (Id_reg bigint not null auto_increment, Grouped varchar(30), Level varchar(30), Major varchar(30), RegDate datetime(6), Student_id bigint, primary key (Id_reg)) engine=InnoDB
+[INFO ] 26-04-2023 14:13:48.241 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7219ac49] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 14:13:48.405 [main] SQL - create table student (Id_std bigint not null, CIN varchar(20), FirstName varchar(20), LastName varchar(20), primary key (Id_std)) engine=InnoDB
+[DEBUG] 26-04-2023 14:13:48.660 [main] SQL - alter table registration add constraint FK25ucw75sqymkkwjugi3pu0nar foreign key (Student_id) references student (Id_std)
+[INFO ] 26-04-2023 14:13:49.253 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[DEBUG] 26-04-2023 14:13:49.371 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:13:49.377 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:13:49.377 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:13:49.479 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_
+[DEBUG] 26-04-2023 14:13:49.507 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:13:49.514 [main] SQL - select student_.Id_std, student_.CIN as cin2_1_, student_.FirstName as firstnam3_1_, student_.LastName as lastname4_1_ from student student_ where student_.Id_std=?
+[DEBUG] 26-04-2023 14:13:49.516 [main] SQL - insert into registration (Grouped, Level, Major, RegDate) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:13:49.557 [main] SQL - insert into registration (Grouped, Level, Major, RegDate) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:13:49.558 [main] SQL - insert into registration (Grouped, Level, Major, RegDate) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:13:49.603 [main] SQL - select registrati0_.Id_reg as id_reg1_0_, registrati0_.Grouped as grouped2_0_, registrati0_.Level as level3_0_, registrati0_.Major as major4_0_, registrati0_.RegDate as regdate5_0_, registrati0_.Student_id as student_6_0_ from registration registrati0_ where registrati0_.Student_id=?
+[DEBUG] 26-04-2023 14:13:49.607 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:13:49.611 [main] SQL - select re0_.Student_id as student_6_0_0_, re0_.Id_reg as id_reg1_0_0_, re0_.Id_reg as id_reg1_0_1_, re0_.Grouped as grouped2_0_1_, re0_.Level as level3_0_1_, re0_.Major as major4_0_1_, re0_.RegDate as regdate5_0_1_, re0_.Student_id as student_6_0_1_ from registration re0_ where re0_.Student_id=?
+[DEBUG] 26-04-2023 14:13:49.616 [main] SQL - delete from student where Id_std=?
+[DEBUG] 26-04-2023 14:13:49.623 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:13:49.625 [main] SQL - update student set CIN=?, FirstName=?, LastName=? where Id_std=?
+[DEBUG] 26-04-2023 14:13:49.634 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_ where student0_.Id_std=(select registrati1_.Student_id from registration registrati1_ where registrati1_.Level=?)
+[INFO ] 26-04-2023 14:18:04.651 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 26-04-2023 14:18:04.688 [main] Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[INFO ] 26-04-2023 14:18:04.811 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[WARN ] 26-04-2023 14:18:04.949 [main] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 26-04-2023 14:18:04.952 [main] pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://localhost:3306/ATELIER2?createDatabaseIfNotExist=true]
+[INFO ] 26-04-2023 14:18:04.952 [main] pooling - HHH10001001: Connection properties: {password=****, user=abmola}
+[INFO ] 26-04-2023 14:18:04.952 [main] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 26-04-2023 14:18:04.954 [main] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 26-04-2023 14:18:05.032 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB10Dialect
+[INFO ] 26-04-2023 14:18:05.167 [main] pooling - HHH10001008: Cleaning up connection pool [jdbc:mariadb://localhost:3306/ATELIER2?createDatabaseIfNotExist=true]
+[INFO ] 26-04-2023 14:19:18.310 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 26-04-2023 14:19:18.355 [main] Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[INFO ] 26-04-2023 14:19:18.505 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[WARN ] 26-04-2023 14:19:18.637 [main] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 26-04-2023 14:19:18.640 [main] pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://localhost:3306/ATELIER2?createDatabaseIfNotExist=true]
+[INFO ] 26-04-2023 14:19:18.640 [main] pooling - HHH10001001: Connection properties: {password=****, user=abmola}
+[INFO ] 26-04-2023 14:19:18.641 [main] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 26-04-2023 14:19:18.642 [main] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 26-04-2023 14:19:18.720 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB10Dialect
+[DEBUG] 26-04-2023 14:19:19.139 [main] SQL - alter table registration drop foreign key if exists FK25ucw75sqymkkwjugi3pu0nar
+[INFO ] 26-04-2023 14:19:19.140 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@59c70ceb] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 14:19:19.350 [main] SQL - drop table if exists registration
+[DEBUG] 26-04-2023 14:19:19.517 [main] SQL - drop table if exists student
+[DEBUG] 26-04-2023 14:19:19.642 [main] SQL - create table registration (Id_reg bigint not null auto_increment, Grouped varchar(30), Level varchar(30), Major varchar(30), RegDate datetime(6), Student_id bigint, primary key (Id_reg)) engine=InnoDB
+[INFO ] 26-04-2023 14:19:19.643 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7219ac49] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 14:19:19.817 [main] SQL - create table student (Id_std bigint not null, CIN varchar(20), FirstName varchar(20), LastName varchar(20), primary key (Id_std)) engine=InnoDB
+[DEBUG] 26-04-2023 14:19:19.950 [main] SQL - alter table registration add constraint FK25ucw75sqymkkwjugi3pu0nar foreign key (Student_id) references student (Id_std)
+[INFO ] 26-04-2023 14:19:20.500 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[DEBUG] 26-04-2023 14:19:20.681 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:19:20.687 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:19:20.688 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:19:20.795 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_
+[DEBUG] 26-04-2023 14:19:20.823 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:19:20.832 [main] SQL - select student_.Id_std, student_.CIN as cin2_1_, student_.FirstName as firstnam3_1_, student_.LastName as lastname4_1_ from student student_ where student_.Id_std=?
+[DEBUG] 26-04-2023 14:19:20.834 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:19:20.849 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:19:20.851 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:19:20.860 [main] SQL - select registrati0_.Id_reg as id_reg1_0_, registrati0_.Grouped as grouped2_0_, registrati0_.Level as level3_0_, registrati0_.Major as major4_0_, registrati0_.RegDate as regdate5_0_, registrati0_.Student_id as student_6_0_ from registration registrati0_ where registrati0_.Student_id=?
+[DEBUG] 26-04-2023 14:19:20.868 [main] SQL - select registrati0_.Id_reg as id_reg1_0_, registrati0_.Grouped as grouped2_0_, registrati0_.Level as level3_0_, registrati0_.Major as major4_0_, registrati0_.RegDate as regdate5_0_, registrati0_.Student_id as student_6_0_ from registration registrati0_ where registrati0_.Student_id=?
+[DEBUG] 26-04-2023 14:19:20.874 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:19:20.878 [main] SQL - select re0_.Student_id as student_6_0_0_, re0_.Id_reg as id_reg1_0_0_, re0_.Id_reg as id_reg1_0_1_, re0_.Grouped as grouped2_0_1_, re0_.Level as level3_0_1_, re0_.Major as major4_0_1_, re0_.RegDate as regdate5_0_1_, re0_.Student_id as student_6_0_1_ from registration re0_ where re0_.Student_id=?
+[DEBUG] 26-04-2023 14:19:20.885 [main] SQL - delete from student where Id_std=?
+[DEBUG] 26-04-2023 14:19:20.892 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:19:20.894 [main] SQL - update student set CIN=?, FirstName=?, LastName=? where Id_std=?
+[DEBUG] 26-04-2023 14:19:20.902 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_ where student0_.Id_std=(select registrati1_.Student_id from registration registrati1_ where registrati1_.Level=?)
+[DEBUG] 26-04-2023 14:19:20.904 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_ where student0_.Id_std=(select registrati1_.Student_id from registration registrati1_ where registrati1_.Level=?)
+[INFO ] 26-04-2023 14:21:48.596 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 26-04-2023 14:21:48.656 [main] Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[INFO ] 26-04-2023 14:21:48.891 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[WARN ] 26-04-2023 14:21:49.046 [main] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 26-04-2023 14:21:49.049 [main] pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://localhost:3306/ATELIER2?createDatabaseIfNotExist=true]
+[INFO ] 26-04-2023 14:21:49.050 [main] pooling - HHH10001001: Connection properties: {password=****, user=abmola}
+[INFO ] 26-04-2023 14:21:49.050 [main] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 26-04-2023 14:21:49.052 [main] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 26-04-2023 14:21:49.118 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB10Dialect
+[DEBUG] 26-04-2023 14:21:49.616 [main] SQL - alter table registration drop foreign key if exists FK25ucw75sqymkkwjugi3pu0nar
+[INFO ] 26-04-2023 14:21:49.617 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@59c70ceb] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 14:21:50.378 [main] SQL - drop table if exists registration
+[DEBUG] 26-04-2023 14:21:50.478 [main] SQL - drop table if exists student
+[DEBUG] 26-04-2023 14:21:50.581 [main] SQL - create table registration (Id_reg bigint not null auto_increment, Grouped varchar(30), Level varchar(30), Major varchar(30), RegDate datetime(6), Student_id bigint, primary key (Id_reg)) engine=InnoDB
+[INFO ] 26-04-2023 14:21:50.581 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7219ac49] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 14:21:50.745 [main] SQL - create table student (Id_std bigint not null, CIN varchar(20), FirstName varchar(20), LastName varchar(20), primary key (Id_std)) engine=InnoDB
+[DEBUG] 26-04-2023 14:21:50.889 [main] SQL - alter table registration add constraint FK25ucw75sqymkkwjugi3pu0nar foreign key (Student_id) references student (Id_std)
+[INFO ] 26-04-2023 14:21:51.348 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[DEBUG] 26-04-2023 14:21:51.463 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:21:51.469 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:21:51.470 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:21:51.505 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_
+[DEBUG] 26-04-2023 14:21:51.519 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:21:51.524 [main] SQL - select student_.Id_std, student_.CIN as cin2_1_, student_.FirstName as firstnam3_1_, student_.LastName as lastname4_1_ from student student_ where student_.Id_std=?
+[DEBUG] 26-04-2023 14:21:51.525 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:21:51.543 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:21:51.544 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:21:51.580 [main] SQL - select registrati0_.Id_reg as id_reg1_0_, registrati0_.Grouped as grouped2_0_, registrati0_.Level as level3_0_, registrati0_.Major as major4_0_, registrati0_.RegDate as regdate5_0_, registrati0_.Student_id as student_6_0_ from registration registrati0_ where registrati0_.Student_id=?
+[DEBUG] 26-04-2023 14:21:51.586 [main] SQL - select registrati0_.Id_reg as id_reg1_0_, registrati0_.Grouped as grouped2_0_, registrati0_.Level as level3_0_, registrati0_.Major as major4_0_, registrati0_.RegDate as regdate5_0_, registrati0_.Student_id as student_6_0_ from registration registrati0_ where registrati0_.Student_id=?
+[DEBUG] 26-04-2023 14:21:51.590 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:21:51.593 [main] SQL - select re0_.Student_id as student_6_0_0_, re0_.Id_reg as id_reg1_0_0_, re0_.Id_reg as id_reg1_0_1_, re0_.Grouped as grouped2_0_1_, re0_.Level as level3_0_1_, re0_.Major as major4_0_1_, re0_.RegDate as regdate5_0_1_, re0_.Student_id as student_6_0_1_ from registration re0_ where re0_.Student_id=?
+[DEBUG] 26-04-2023 14:21:51.599 [main] SQL - delete from student where Id_std=?
+[DEBUG] 26-04-2023 14:21:51.620 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:21:51.622 [main] SQL - update student set CIN=?, FirstName=?, LastName=? where Id_std=?
+[DEBUG] 26-04-2023 14:21:51.631 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_ where student0_.Id_std=(select registrati1_.Student_id from registration registrati1_ where registrati1_.Level=?)
+[DEBUG] 26-04-2023 14:21:51.632 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_ where student0_.Id_std=(select registrati1_.Student_id from registration registrati1_ where registrati1_.Level=?)
+[INFO ] 26-04-2023 14:25:26.518 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 26-04-2023 14:25:26.564 [main] Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[INFO ] 26-04-2023 14:25:26.748 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[WARN ] 26-04-2023 14:25:26.892 [main] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 26-04-2023 14:25:26.895 [main] pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://localhost:3306/ATELIER2?createDatabaseIfNotExist=true]
+[INFO ] 26-04-2023 14:25:26.895 [main] pooling - HHH10001001: Connection properties: {password=****, user=abmola}
+[INFO ] 26-04-2023 14:25:26.895 [main] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 26-04-2023 14:25:26.897 [main] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 26-04-2023 14:25:26.970 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB10Dialect
+[DEBUG] 26-04-2023 14:25:27.485 [main] SQL - alter table registration drop foreign key if exists FK25ucw75sqymkkwjugi3pu0nar
+[INFO ] 26-04-2023 14:25:27.486 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@59c70ceb] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 14:25:27.931 [main] SQL - drop table if exists registration
+[DEBUG] 26-04-2023 14:25:28.075 [main] SQL - drop table if exists student
+[DEBUG] 26-04-2023 14:25:28.179 [main] SQL - create table registration (Id_reg bigint not null auto_increment, Grouped varchar(30), Level varchar(30), Major varchar(30), RegDate datetime(6), Student_id bigint, primary key (Id_reg)) engine=InnoDB
+[INFO ] 26-04-2023 14:25:28.180 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7219ac49] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 14:25:28.342 [main] SQL - create table student (Id_std bigint not null, CIN varchar(20), FirstName varchar(20), LastName varchar(20), primary key (Id_std)) engine=InnoDB
+[DEBUG] 26-04-2023 14:25:28.509 [main] SQL - alter table registration add constraint FK25ucw75sqymkkwjugi3pu0nar foreign key (Student_id) references student (Id_std)
+[INFO ] 26-04-2023 14:25:29.001 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[DEBUG] 26-04-2023 14:25:29.116 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:25:29.122 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:25:29.123 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:25:29.302 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_
+[DEBUG] 26-04-2023 14:25:29.316 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:25:29.321 [main] SQL - select student_.Id_std, student_.CIN as cin2_1_, student_.FirstName as firstnam3_1_, student_.LastName as lastname4_1_ from student student_ where student_.Id_std=?
+[DEBUG] 26-04-2023 14:25:29.322 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:25:29.329 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:25:29.331 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:25:29.340 [main] SQL - select registrati0_.Id_reg as id_reg1_0_, registrati0_.Grouped as grouped2_0_, registrati0_.Level as level3_0_, registrati0_.Major as major4_0_, registrati0_.RegDate as regdate5_0_, registrati0_.Student_id as student_6_0_ from registration registrati0_ where registrati0_.Student_id=?
+[DEBUG] 26-04-2023 14:25:29.345 [main] SQL - select registrati0_.Id_reg as id_reg1_0_, registrati0_.Grouped as grouped2_0_, registrati0_.Level as level3_0_, registrati0_.Major as major4_0_, registrati0_.RegDate as regdate5_0_, registrati0_.Student_id as student_6_0_ from registration registrati0_ where registrati0_.Student_id=?
+[DEBUG] 26-04-2023 14:25:29.349 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:25:29.351 [main] SQL - select re0_.Student_id as student_6_0_0_, re0_.Id_reg as id_reg1_0_0_, re0_.Id_reg as id_reg1_0_1_, re0_.Grouped as grouped2_0_1_, re0_.Level as level3_0_1_, re0_.Major as major4_0_1_, re0_.RegDate as regdate5_0_1_, re0_.Student_id as student_6_0_1_ from registration re0_ where re0_.Student_id=?
+[DEBUG] 26-04-2023 14:25:29.355 [main] SQL - delete from student where Id_std=?
+[DEBUG] 26-04-2023 14:25:29.362 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:25:29.364 [main] SQL - update student set CIN=?, FirstName=?, LastName=? where Id_std=?
+[DEBUG] 26-04-2023 14:25:29.373 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_ where student0_.Id_std=(select registrati1_.Student_id from registration registrati1_ where registrati1_.Level=?)
+[DEBUG] 26-04-2023 14:25:29.374 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_ where student0_.Id_std=(select registrati1_.Student_id from registration registrati1_ where registrati1_.Level=?)
+[INFO ] 26-04-2023 14:25:38.506 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 26-04-2023 14:25:38.543 [main] Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[INFO ] 26-04-2023 14:25:38.677 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[WARN ] 26-04-2023 14:25:38.812 [main] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 26-04-2023 14:25:38.815 [main] pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://localhost:3306/ATELIER2?createDatabaseIfNotExist=true]
+[INFO ] 26-04-2023 14:25:38.815 [main] pooling - HHH10001001: Connection properties: {password=****, user=abmola}
+[INFO ] 26-04-2023 14:25:38.816 [main] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 26-04-2023 14:25:38.817 [main] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 26-04-2023 14:25:38.889 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB10Dialect
+[DEBUG] 26-04-2023 14:25:39.306 [main] SQL - alter table registration drop foreign key if exists FK25ucw75sqymkkwjugi3pu0nar
+[INFO ] 26-04-2023 14:25:39.307 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@59c70ceb] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 14:25:39.520 [main] SQL - drop table if exists registration
+[DEBUG] 26-04-2023 14:25:39.675 [main] SQL - drop table if exists student
+[DEBUG] 26-04-2023 14:25:39.778 [main] SQL - create table registration (Id_reg bigint not null auto_increment, Grouped varchar(30), Level varchar(30), Major varchar(30), RegDate datetime(6), Student_id bigint, primary key (Id_reg)) engine=InnoDB
+[INFO ] 26-04-2023 14:25:39.778 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7219ac49] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 14:25:39.965 [main] SQL - create table student (Id_std bigint not null, CIN varchar(20), FirstName varchar(20), LastName varchar(20), primary key (Id_std)) engine=InnoDB
+[DEBUG] 26-04-2023 14:25:40.132 [main] SQL - alter table registration add constraint FK25ucw75sqymkkwjugi3pu0nar foreign key (Student_id) references student (Id_std)
+[INFO ] 26-04-2023 14:25:40.581 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[DEBUG] 26-04-2023 14:25:40.698 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:25:40.704 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:25:40.705 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:25:40.873 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_
+[DEBUG] 26-04-2023 14:25:40.891 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:25:40.896 [main] SQL - select student_.Id_std, student_.CIN as cin2_1_, student_.FirstName as firstnam3_1_, student_.LastName as lastname4_1_ from student student_ where student_.Id_std=?
+[DEBUG] 26-04-2023 14:25:40.897 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:25:40.908 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:25:40.910 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:25:40.919 [main] SQL - select registrati0_.Id_reg as id_reg1_0_, registrati0_.Grouped as grouped2_0_, registrati0_.Level as level3_0_, registrati0_.Major as major4_0_, registrati0_.RegDate as regdate5_0_, registrati0_.Student_id as student_6_0_ from registration registrati0_ where registrati0_.Student_id=?
+[DEBUG] 26-04-2023 14:25:40.926 [main] SQL - select registrati0_.Id_reg as id_reg1_0_, registrati0_.Grouped as grouped2_0_, registrati0_.Level as level3_0_, registrati0_.Major as major4_0_, registrati0_.RegDate as regdate5_0_, registrati0_.Student_id as student_6_0_ from registration registrati0_ where registrati0_.Student_id=?
+[DEBUG] 26-04-2023 14:25:40.929 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:25:40.933 [main] SQL - select re0_.Student_id as student_6_0_0_, re0_.Id_reg as id_reg1_0_0_, re0_.Id_reg as id_reg1_0_1_, re0_.Grouped as grouped2_0_1_, re0_.Level as level3_0_1_, re0_.Major as major4_0_1_, re0_.RegDate as regdate5_0_1_, re0_.Student_id as student_6_0_1_ from registration re0_ where re0_.Student_id=?
+[DEBUG] 26-04-2023 14:25:40.938 [main] SQL - delete from student where Id_std=?
+[DEBUG] 26-04-2023 14:25:40.952 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:25:40.954 [main] SQL - update student set CIN=?, FirstName=?, LastName=? where Id_std=?
+[DEBUG] 26-04-2023 14:25:40.963 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_ where student0_.Id_std=(select registrati1_.Student_id from registration registrati1_ where registrati1_.Level=?)
+[DEBUG] 26-04-2023 14:25:40.964 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_ where student0_.Id_std=(select registrati1_.Student_id from registration registrati1_ where registrati1_.Level=?)
+[INFO ] 26-04-2023 14:33:59.583 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 26-04-2023 14:33:59.628 [main] Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[INFO ] 26-04-2023 14:33:59.785 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[WARN ] 26-04-2023 14:33:59.927 [main] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 26-04-2023 14:33:59.929 [main] pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://localhost:3306/ATELIER2?createDatabaseIfNotExist=true]
+[INFO ] 26-04-2023 14:33:59.930 [main] pooling - HHH10001001: Connection properties: {password=****, user=abmola}
+[INFO ] 26-04-2023 14:33:59.930 [main] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 26-04-2023 14:33:59.932 [main] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 26-04-2023 14:34:00.008 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB10Dialect
+[DEBUG] 26-04-2023 14:34:00.623 [main] SQL - alter table registration drop foreign key if exists FK25ucw75sqymkkwjugi3pu0nar
+[INFO ] 26-04-2023 14:34:00.624 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@59c70ceb] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 14:34:00.906 [main] SQL - drop table if exists registration
+[DEBUG] 26-04-2023 14:34:01.028 [main] SQL - drop table if exists student
+[DEBUG] 26-04-2023 14:34:01.264 [main] SQL - create table registration (Id_reg bigint not null auto_increment, Grouped varchar(30), Level varchar(30), Major varchar(30), RegDate datetime(6), Student_id bigint, primary key (Id_reg)) engine=InnoDB
+[INFO ] 26-04-2023 14:34:01.265 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7219ac49] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 14:34:01.450 [main] SQL - create table student (Id_std bigint not null, CIN varchar(20), FirstName varchar(20), LastName varchar(20), primary key (Id_std)) engine=InnoDB
+[DEBUG] 26-04-2023 14:34:01.628 [main] SQL - alter table registration add constraint FK25ucw75sqymkkwjugi3pu0nar foreign key (Student_id) references student (Id_std)
+[INFO ] 26-04-2023 14:34:02.110 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[DEBUG] 26-04-2023 14:34:02.224 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:34:02.229 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:34:02.230 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:34:02.279 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_
+[DEBUG] 26-04-2023 14:34:02.292 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[INFO ] 26-04-2023 14:35:37.116 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 26-04-2023 14:35:37.157 [main] Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[INFO ] 26-04-2023 14:35:37.286 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[WARN ] 26-04-2023 14:35:37.413 [main] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 26-04-2023 14:35:37.415 [main] pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://localhost:3306/ATELIER2?createDatabaseIfNotExist=true]
+[INFO ] 26-04-2023 14:35:37.416 [main] pooling - HHH10001001: Connection properties: {password=****, user=abmola}
+[INFO ] 26-04-2023 14:35:37.416 [main] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 26-04-2023 14:35:37.417 [main] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 26-04-2023 14:35:37.492 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB10Dialect
+[DEBUG] 26-04-2023 14:35:38.035 [main] SQL - alter table registration drop foreign key if exists FK25ucw75sqymkkwjugi3pu0nar
+[INFO ] 26-04-2023 14:35:38.037 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@59c70ceb] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 14:35:38.343 [main] SQL - drop table if exists registration
+[DEBUG] 26-04-2023 14:35:38.476 [main] SQL - drop table if exists student
+[DEBUG] 26-04-2023 14:35:38.623 [main] SQL - create table registration (Id_reg bigint not null auto_increment, Grouped varchar(30), Level varchar(30), Major varchar(30), RegDate datetime(6), Student_id bigint, primary key (Id_reg)) engine=InnoDB
+[INFO ] 26-04-2023 14:35:38.623 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7219ac49] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 14:35:38.787 [main] SQL - create table student (Id_std bigint not null, CIN varchar(20), FirstName varchar(20), LastName varchar(20), primary key (Id_std)) engine=InnoDB
+[DEBUG] 26-04-2023 14:35:39.021 [main] SQL - alter table registration add constraint FK25ucw75sqymkkwjugi3pu0nar foreign key (Student_id) references student (Id_std)
+[INFO ] 26-04-2023 14:35:39.482 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[DEBUG] 26-04-2023 14:35:39.593 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:35:39.599 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:35:39.600 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:35:39.661 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_
+[DEBUG] 26-04-2023 14:35:39.674 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:35:39.679 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:35:39.682 [main] SQL - select student_.Id_std, student_.CIN as cin2_1_, student_.FirstName as firstnam3_1_, student_.LastName as lastname4_1_ from student student_ where student_.Id_std=?
+[DEBUG] 26-04-2023 14:35:39.683 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:35:39.700 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:35:39.701 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:35:39.702 [main] SQL - select student_.Id_std, student_.CIN as cin2_1_, student_.FirstName as firstnam3_1_, student_.LastName as lastname4_1_ from student student_ where student_.Id_std=?
+[DEBUG] 26-04-2023 14:35:39.703 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:35:39.741 [main] SQL - select registrati0_.Id_reg as id_reg1_0_, registrati0_.Grouped as grouped2_0_, registrati0_.Level as level3_0_, registrati0_.Major as major4_0_, registrati0_.RegDate as regdate5_0_, registrati0_.Student_id as student_6_0_ from registration registrati0_ where registrati0_.Student_id=?
+[DEBUG] 26-04-2023 14:35:39.747 [main] SQL - select registrati0_.Id_reg as id_reg1_0_, registrati0_.Grouped as grouped2_0_, registrati0_.Level as level3_0_, registrati0_.Major as major4_0_, registrati0_.RegDate as regdate5_0_, registrati0_.Student_id as student_6_0_ from registration registrati0_ where registrati0_.Student_id=?
+[DEBUG] 26-04-2023 14:35:39.751 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:35:39.755 [main] SQL - select re0_.Student_id as student_6_0_0_, re0_.Id_reg as id_reg1_0_0_, re0_.Id_reg as id_reg1_0_1_, re0_.Grouped as grouped2_0_1_, re0_.Level as level3_0_1_, re0_.Major as major4_0_1_, re0_.RegDate as regdate5_0_1_, re0_.Student_id as student_6_0_1_ from registration re0_ where re0_.Student_id=?
+[DEBUG] 26-04-2023 14:35:39.761 [main] SQL - delete from student where Id_std=?
+[DEBUG] 26-04-2023 14:35:39.787 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:35:39.789 [main] SQL - update student set CIN=?, FirstName=?, LastName=? where Id_std=?
+[DEBUG] 26-04-2023 14:35:39.820 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_ where student0_.Id_std=(select registrati1_.Student_id from registration registrati1_ where registrati1_.Level=?)
+[WARN ] 26-04-2023 14:35:39.821 [main] SqlExceptionHelper - SQL Error: 1242, SQLState: 21000
+[ERROR] 26-04-2023 14:35:39.821 [main] SqlExceptionHelper - (conn=40) Subquery returns more than 1 row
+[INFO ] 26-04-2023 14:38:26.341 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 26-04-2023 14:38:26.396 [main] Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[INFO ] 26-04-2023 14:38:26.555 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[WARN ] 26-04-2023 14:38:26.668 [main] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 26-04-2023 14:38:26.671 [main] pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://localhost:3306/ATELIER2?createDatabaseIfNotExist=true]
+[INFO ] 26-04-2023 14:38:26.671 [main] pooling - HHH10001001: Connection properties: {password=****, user=abmola}
+[INFO ] 26-04-2023 14:38:26.672 [main] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 26-04-2023 14:38:26.673 [main] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 26-04-2023 14:38:26.745 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB10Dialect
+[DEBUG] 26-04-2023 14:38:27.173 [main] SQL - alter table registration drop foreign key if exists FK25ucw75sqymkkwjugi3pu0nar
+[INFO ] 26-04-2023 14:38:27.174 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@59c70ceb] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 14:38:27.438 [main] SQL - drop table if exists registration
+[DEBUG] 26-04-2023 14:38:27.660 [main] SQL - drop table if exists student
+[DEBUG] 26-04-2023 14:38:27.786 [main] SQL - create table registration (Id_reg bigint not null auto_increment, Grouped varchar(30), Level varchar(30), Major varchar(30), RegDate datetime(6), Student_id bigint, primary key (Id_reg)) engine=InnoDB
+[INFO ] 26-04-2023 14:38:27.787 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7219ac49] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 14:38:27.939 [main] SQL - create table student (Id_std bigint not null, CIN varchar(20), FirstName varchar(20), LastName varchar(20), primary key (Id_std)) engine=InnoDB
+[DEBUG] 26-04-2023 14:38:28.161 [main] SQL - alter table registration add constraint FK25ucw75sqymkkwjugi3pu0nar foreign key (Student_id) references student (Id_std)
+[INFO ] 26-04-2023 14:38:28.640 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[DEBUG] 26-04-2023 14:38:28.854 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:38:28.862 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:38:28.862 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:38:28.938 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_
+[DEBUG] 26-04-2023 14:38:28.960 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:38:28.967 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:38:28.971 [main] SQL - select student_.Id_std, student_.CIN as cin2_1_, student_.FirstName as firstnam3_1_, student_.LastName as lastname4_1_ from student student_ where student_.Id_std=?
+[DEBUG] 26-04-2023 14:38:28.973 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:38:29.031 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:38:29.032 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:38:29.033 [main] SQL - select student_.Id_std, student_.CIN as cin2_1_, student_.FirstName as firstnam3_1_, student_.LastName as lastname4_1_ from student student_ where student_.Id_std=?
+[DEBUG] 26-04-2023 14:38:29.033 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:38:29.073 [main] SQL - select registrati0_.Id_reg as id_reg1_0_, registrati0_.Grouped as grouped2_0_, registrati0_.Level as level3_0_, registrati0_.Major as major4_0_, registrati0_.RegDate as regdate5_0_, registrati0_.Student_id as student_6_0_ from registration registrati0_ where registrati0_.Student_id=?
+[DEBUG] 26-04-2023 14:38:29.082 [main] SQL - select registrati0_.Id_reg as id_reg1_0_, registrati0_.Grouped as grouped2_0_, registrati0_.Level as level3_0_, registrati0_.Major as major4_0_, registrati0_.RegDate as regdate5_0_, registrati0_.Student_id as student_6_0_ from registration registrati0_ where registrati0_.Student_id=?
+[DEBUG] 26-04-2023 14:38:29.087 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:38:29.094 [main] SQL - select re0_.Student_id as student_6_0_0_, re0_.Id_reg as id_reg1_0_0_, re0_.Id_reg as id_reg1_0_1_, re0_.Grouped as grouped2_0_1_, re0_.Level as level3_0_1_, re0_.Major as major4_0_1_, re0_.RegDate as regdate5_0_1_, re0_.Student_id as student_6_0_1_ from registration re0_ where re0_.Student_id=?
+[DEBUG] 26-04-2023 14:38:29.107 [main] SQL - delete from student where Id_std=?
+[DEBUG] 26-04-2023 14:38:29.117 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:38:29.120 [main] SQL - update student set CIN=?, FirstName=?, LastName=? where Id_std=?
+[DEBUG] 26-04-2023 14:38:29.127 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_ where student0_.Id_std=(select registrati1_.Student_id from registration registrati1_ where registrati1_.Level=?)
+[WARN ] 26-04-2023 14:38:29.130 [main] SqlExceptionHelper - SQL Error: 1242, SQLState: 21000
+[ERROR] 26-04-2023 14:38:29.130 [main] SqlExceptionHelper - (conn=45) Subquery returns more than 1 row
+[INFO ] 26-04-2023 14:38:42.215 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 26-04-2023 14:38:42.253 [main] Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[INFO ] 26-04-2023 14:38:42.385 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[WARN ] 26-04-2023 14:38:42.508 [main] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 26-04-2023 14:38:42.511 [main] pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://localhost:3306/ATELIER2?createDatabaseIfNotExist=true]
+[INFO ] 26-04-2023 14:38:42.511 [main] pooling - HHH10001001: Connection properties: {password=****, user=abmola}
+[INFO ] 26-04-2023 14:38:42.511 [main] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 26-04-2023 14:38:42.513 [main] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 26-04-2023 14:38:42.577 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB10Dialect
+[DEBUG] 26-04-2023 14:38:43.011 [main] SQL - alter table registration drop foreign key if exists FK25ucw75sqymkkwjugi3pu0nar
+[INFO ] 26-04-2023 14:38:43.012 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@59c70ceb] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 14:38:43.217 [main] SQL - drop table if exists registration
+[DEBUG] 26-04-2023 14:38:43.416 [main] SQL - drop table if exists student
+[DEBUG] 26-04-2023 14:38:43.541 [main] SQL - create table registration (Id_reg bigint not null auto_increment, Grouped varchar(30), Level varchar(30), Major varchar(30), RegDate datetime(6), Student_id bigint, primary key (Id_reg)) engine=InnoDB
+[INFO ] 26-04-2023 14:38:43.542 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7219ac49] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 14:38:43.750 [main] SQL - create table student (Id_std bigint not null, CIN varchar(20), FirstName varchar(20), LastName varchar(20), primary key (Id_std)) engine=InnoDB
+[DEBUG] 26-04-2023 14:38:43.950 [main] SQL - alter table registration add constraint FK25ucw75sqymkkwjugi3pu0nar foreign key (Student_id) references student (Id_std)
+[INFO ] 26-04-2023 14:38:44.460 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[DEBUG] 26-04-2023 14:38:44.572 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:38:44.577 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:38:44.578 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:38:44.692 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_
+[DEBUG] 26-04-2023 14:38:44.713 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:38:44.720 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:38:44.725 [main] SQL - select student_.Id_std, student_.CIN as cin2_1_, student_.FirstName as firstnam3_1_, student_.LastName as lastname4_1_ from student student_ where student_.Id_std=?
+[DEBUG] 26-04-2023 14:38:44.727 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:38:44.740 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:38:44.742 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:38:44.743 [main] SQL - select student_.Id_std, student_.CIN as cin2_1_, student_.FirstName as firstnam3_1_, student_.LastName as lastname4_1_ from student student_ where student_.Id_std=?
+[DEBUG] 26-04-2023 14:38:44.743 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:38:44.751 [main] SQL - select registrati0_.Id_reg as id_reg1_0_, registrati0_.Grouped as grouped2_0_, registrati0_.Level as level3_0_, registrati0_.Major as major4_0_, registrati0_.RegDate as regdate5_0_, registrati0_.Student_id as student_6_0_ from registration registrati0_ where registrati0_.Student_id=?
+[DEBUG] 26-04-2023 14:38:44.756 [main] SQL - select registrati0_.Id_reg as id_reg1_0_, registrati0_.Grouped as grouped2_0_, registrati0_.Level as level3_0_, registrati0_.Major as major4_0_, registrati0_.RegDate as regdate5_0_, registrati0_.Student_id as student_6_0_ from registration registrati0_ where registrati0_.Student_id=?
+[DEBUG] 26-04-2023 14:38:44.760 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:38:44.764 [main] SQL - select re0_.Student_id as student_6_0_0_, re0_.Id_reg as id_reg1_0_0_, re0_.Id_reg as id_reg1_0_1_, re0_.Grouped as grouped2_0_1_, re0_.Level as level3_0_1_, re0_.Major as major4_0_1_, re0_.RegDate as regdate5_0_1_, re0_.Student_id as student_6_0_1_ from registration re0_ where re0_.Student_id=?
+[DEBUG] 26-04-2023 14:38:44.769 [main] SQL - delete from student where Id_std=?
+[DEBUG] 26-04-2023 14:38:44.784 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:38:44.785 [main] SQL - update student set CIN=?, FirstName=?, LastName=? where Id_std=?
+[DEBUG] 26-04-2023 14:38:44.795 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_ where student0_.Id_std=(select registrati1_.Student_id from registration registrati1_ where registrati1_.Level=?)
+[INFO ] 26-04-2023 14:39:40.718 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 26-04-2023 14:39:40.753 [main] Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[INFO ] 26-04-2023 14:39:40.882 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[WARN ] 26-04-2023 14:39:40.999 [main] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 26-04-2023 14:39:41.001 [main] pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://localhost:3306/ATELIER2?createDatabaseIfNotExist=true]
+[INFO ] 26-04-2023 14:39:41.002 [main] pooling - HHH10001001: Connection properties: {password=****, user=abmola}
+[INFO ] 26-04-2023 14:39:41.002 [main] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 26-04-2023 14:39:41.003 [main] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 26-04-2023 14:39:41.072 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB10Dialect
+[DEBUG] 26-04-2023 14:39:41.516 [main] SQL - alter table registration drop foreign key if exists FK25ucw75sqymkkwjugi3pu0nar
+[INFO ] 26-04-2023 14:39:41.517 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@59c70ceb] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 14:39:41.786 [main] SQL - drop table if exists registration
+[DEBUG] 26-04-2023 14:39:41.897 [main] SQL - drop table if exists student
+[DEBUG] 26-04-2023 14:39:42.088 [main] SQL - create table registration (Id_reg bigint not null auto_increment, Grouped varchar(30), Level varchar(30), Major varchar(30), RegDate datetime(6), Student_id bigint, primary key (Id_reg)) engine=InnoDB
+[INFO ] 26-04-2023 14:39:42.088 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7219ac49] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 14:39:42.230 [main] SQL - create table student (Id_std bigint not null, CIN varchar(20), FirstName varchar(20), LastName varchar(20), primary key (Id_std)) engine=InnoDB
+[DEBUG] 26-04-2023 14:39:42.442 [main] SQL - alter table registration add constraint FK25ucw75sqymkkwjugi3pu0nar foreign key (Student_id) references student (Id_std)
+[INFO ] 26-04-2023 14:39:42.923 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[DEBUG] 26-04-2023 14:39:43.139 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:39:43.146 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:39:43.147 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:39:43.218 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_
+[DEBUG] 26-04-2023 14:39:43.242 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:39:43.249 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:39:43.254 [main] SQL - select student_.Id_std, student_.CIN as cin2_1_, student_.FirstName as firstnam3_1_, student_.LastName as lastname4_1_ from student student_ where student_.Id_std=?
+[DEBUG] 26-04-2023 14:39:43.256 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:39:43.266 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:39:43.268 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:39:43.269 [main] SQL - select student_.Id_std, student_.CIN as cin2_1_, student_.FirstName as firstnam3_1_, student_.LastName as lastname4_1_ from student student_ where student_.Id_std=?
+[DEBUG] 26-04-2023 14:39:43.270 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:39:43.305 [main] SQL - select registrati0_.Id_reg as id_reg1_0_, registrati0_.Grouped as grouped2_0_, registrati0_.Level as level3_0_, registrati0_.Major as major4_0_, registrati0_.RegDate as regdate5_0_, registrati0_.Student_id as student_6_0_ from registration registrati0_ where registrati0_.Student_id=?
+[DEBUG] 26-04-2023 14:39:43.314 [main] SQL - select registrati0_.Id_reg as id_reg1_0_, registrati0_.Grouped as grouped2_0_, registrati0_.Level as level3_0_, registrati0_.Major as major4_0_, registrati0_.RegDate as regdate5_0_, registrati0_.Student_id as student_6_0_ from registration registrati0_ where registrati0_.Student_id=?
+[DEBUG] 26-04-2023 14:39:43.321 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:39:43.326 [main] SQL - select re0_.Student_id as student_6_0_0_, re0_.Id_reg as id_reg1_0_0_, re0_.Id_reg as id_reg1_0_1_, re0_.Grouped as grouped2_0_1_, re0_.Level as level3_0_1_, re0_.Major as major4_0_1_, re0_.RegDate as regdate5_0_1_, re0_.Student_id as student_6_0_1_ from registration re0_ where re0_.Student_id=?
+[DEBUG] 26-04-2023 14:39:43.336 [main] SQL - delete from student where Id_std=?
+[DEBUG] 26-04-2023 14:39:43.366 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:39:43.370 [main] SQL - update student set CIN=?, FirstName=?, LastName=? where Id_std=?
+[DEBUG] 26-04-2023 14:39:43.387 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_ where student0_.Id_std=(select registrati1_.Student_id from registration registrati1_ where registrati1_.Level=?)
+[DEBUG] 26-04-2023 14:39:43.391 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_ where student0_.Id_std=(select registrati1_.Student_id from registration registrati1_ where registrati1_.Level=?)
+[INFO ] 26-04-2023 14:49:32.912 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 26-04-2023 14:49:32.969 [main] Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[INFO ] 26-04-2023 14:49:33.180 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[WARN ] 26-04-2023 14:49:33.323 [main] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 26-04-2023 14:49:33.326 [main] pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://localhost:3306/ATELIER2?createDatabaseIfNotExist=true]
+[INFO ] 26-04-2023 14:49:33.327 [main] pooling - HHH10001001: Connection properties: {password=****, user=abmola}
+[INFO ] 26-04-2023 14:49:33.327 [main] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 26-04-2023 14:49:33.329 [main] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 26-04-2023 14:49:33.417 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB10Dialect
+[DEBUG] 26-04-2023 14:49:33.999 [main] SQL - alter table registration drop foreign key if exists FK25ucw75sqymkkwjugi3pu0nar
+[INFO ] 26-04-2023 14:49:34.001 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@59c70ceb] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 14:49:34.241 [main] SQL - drop table if exists registration
+[DEBUG] 26-04-2023 14:49:34.374 [main] SQL - drop table if exists student
+[DEBUG] 26-04-2023 14:49:34.555 [main] SQL - create table registration (Id_reg bigint not null auto_increment, Grouped varchar(30), Level varchar(30), Major varchar(30), RegDate datetime(6), Student_id bigint, primary key (Id_reg)) engine=InnoDB
+[INFO ] 26-04-2023 14:49:34.555 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7219ac49] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 14:49:34.752 [main] SQL - create table student (Id_std bigint not null, CIN varchar(20), FirstName varchar(20), LastName varchar(20), primary key (Id_std)) engine=InnoDB
+[DEBUG] 26-04-2023 14:49:34.930 [main] SQL - alter table registration add constraint FK25ucw75sqymkkwjugi3pu0nar foreign key (Student_id) references student (Id_std)
+[INFO ] 26-04-2023 14:49:35.413 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[DEBUG] 26-04-2023 14:49:35.549 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:49:35.555 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:49:35.556 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:49:35.597 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_
+[DEBUG] 26-04-2023 14:49:35.615 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:49:35.621 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:49:35.627 [main] SQL - select student_.Id_std, student_.CIN as cin2_1_, student_.FirstName as firstnam3_1_, student_.LastName as lastname4_1_ from student student_ where student_.Id_std=?
+[DEBUG] 26-04-2023 14:49:35.629 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:49:35.645 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:49:35.647 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:49:35.648 [main] SQL - select student_.Id_std, student_.CIN as cin2_1_, student_.FirstName as firstnam3_1_, student_.LastName as lastname4_1_ from student student_ where student_.Id_std=?
+[DEBUG] 26-04-2023 14:49:35.649 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:49:35.689 [main] SQL - select registrati0_.Id_reg as id_reg1_0_, registrati0_.Grouped as grouped2_0_, registrati0_.Level as level3_0_, registrati0_.Major as major4_0_, registrati0_.RegDate as regdate5_0_, registrati0_.Student_id as student_6_0_ from registration registrati0_ where registrati0_.Student_id=?
+[DEBUG] 26-04-2023 14:49:35.698 [main] SQL - select registrati0_.Id_reg as id_reg1_0_, registrati0_.Grouped as grouped2_0_, registrati0_.Level as level3_0_, registrati0_.Major as major4_0_, registrati0_.RegDate as regdate5_0_, registrati0_.Student_id as student_6_0_ from registration registrati0_ where registrati0_.Student_id=?
+[DEBUG] 26-04-2023 14:49:35.702 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:49:35.705 [main] SQL - select re0_.Student_id as student_6_0_0_, re0_.Id_reg as id_reg1_0_0_, re0_.Id_reg as id_reg1_0_1_, re0_.Grouped as grouped2_0_1_, re0_.Level as level3_0_1_, re0_.Major as major4_0_1_, re0_.RegDate as regdate5_0_1_, re0_.Student_id as student_6_0_1_ from registration re0_ where re0_.Student_id=?
+[DEBUG] 26-04-2023 14:49:35.713 [main] SQL - delete from student where Id_std=?
+[DEBUG] 26-04-2023 14:49:35.744 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:49:35.746 [main] SQL - update student set CIN=?, FirstName=?, LastName=? where Id_std=?
+[DEBUG] 26-04-2023 14:49:35.754 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_ where student0_.Id_std=(select registrati1_.Student_id from registration registrati1_ where registrati1_.Level=?)
+[DEBUG] 26-04-2023 14:49:35.755 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_ where student0_.Id_std=(select registrati1_.Student_id from registration registrati1_ where registrati1_.Level=?)
+[INFO ] 26-04-2023 14:50:21.643 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 26-04-2023 14:50:21.695 [main] Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[INFO ] 26-04-2023 14:50:21.855 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[WARN ] 26-04-2023 14:50:21.997 [main] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 26-04-2023 14:50:22.001 [main] pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://localhost:3306/ATELIER2?createDatabaseIfNotExist=true]
+[INFO ] 26-04-2023 14:50:22.002 [main] pooling - HHH10001001: Connection properties: {password=****, user=abmola}
+[INFO ] 26-04-2023 14:50:22.002 [main] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 26-04-2023 14:50:22.004 [main] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 26-04-2023 14:50:22.107 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB10Dialect
+[DEBUG] 26-04-2023 14:50:22.654 [main] SQL - alter table registration drop foreign key if exists FK25ucw75sqymkkwjugi3pu0nar
+[INFO ] 26-04-2023 14:50:22.655 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@59c70ceb] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 14:50:22.921 [main] SQL - drop table if exists registration
+[DEBUG] 26-04-2023 14:50:23.032 [main] SQL - drop table if exists student
+[DEBUG] 26-04-2023 14:50:23.201 [main] SQL - create table registration (Id_reg bigint not null auto_increment, Grouped varchar(30), Level varchar(30), Major varchar(30), RegDate datetime(6), Student_id bigint, primary key (Id_reg)) engine=InnoDB
+[INFO ] 26-04-2023 14:50:23.201 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7219ac49] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 14:50:23.376 [main] SQL - create table student (Id_std bigint not null, CIN varchar(20), FirstName varchar(20), LastName varchar(20), primary key (Id_std)) engine=InnoDB
+[DEBUG] 26-04-2023 14:50:23.566 [main] SQL - alter table registration add constraint FK25ucw75sqymkkwjugi3pu0nar foreign key (Student_id) references student (Id_std)
+[INFO ] 26-04-2023 14:50:24.049 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[DEBUG] 26-04-2023 14:50:24.183 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:50:24.188 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:50:24.189 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:50:24.366 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_
+[DEBUG] 26-04-2023 14:50:24.384 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:50:24.388 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:50:24.392 [main] SQL - select student_.Id_std, student_.CIN as cin2_1_, student_.FirstName as firstnam3_1_, student_.LastName as lastname4_1_ from student student_ where student_.Id_std=?
+[DEBUG] 26-04-2023 14:50:24.393 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:50:24.403 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:50:24.404 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:50:24.405 [main] SQL - select student_.Id_std, student_.CIN as cin2_1_, student_.FirstName as firstnam3_1_, student_.LastName as lastname4_1_ from student student_ where student_.Id_std=?
+[DEBUG] 26-04-2023 14:50:24.405 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:50:24.413 [main] SQL - select registrati0_.Id_reg as id_reg1_0_, registrati0_.Grouped as grouped2_0_, registrati0_.Level as level3_0_, registrati0_.Major as major4_0_, registrati0_.RegDate as regdate5_0_, registrati0_.Student_id as student_6_0_ from registration registrati0_ where registrati0_.Student_id=?
+[DEBUG] 26-04-2023 14:50:24.419 [main] SQL - select registrati0_.Id_reg as id_reg1_0_, registrati0_.Grouped as grouped2_0_, registrati0_.Level as level3_0_, registrati0_.Major as major4_0_, registrati0_.RegDate as regdate5_0_, registrati0_.Student_id as student_6_0_ from registration registrati0_ where registrati0_.Student_id=?
+[DEBUG] 26-04-2023 14:50:24.422 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:50:24.425 [main] SQL - select re0_.Student_id as student_6_0_0_, re0_.Id_reg as id_reg1_0_0_, re0_.Id_reg as id_reg1_0_1_, re0_.Grouped as grouped2_0_1_, re0_.Level as level3_0_1_, re0_.Major as major4_0_1_, re0_.RegDate as regdate5_0_1_, re0_.Student_id as student_6_0_1_ from registration re0_ where re0_.Student_id=?
+[DEBUG] 26-04-2023 14:50:24.431 [main] SQL - delete from student where Id_std=?
+[DEBUG] 26-04-2023 14:50:24.446 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:50:24.448 [main] SQL - update student set CIN=?, FirstName=?, LastName=? where Id_std=?
+[DEBUG] 26-04-2023 14:50:24.457 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_ where student0_.Id_std=(select registrati1_.Student_id from registration registrati1_ where registrati1_.Level=?)
+[DEBUG] 26-04-2023 14:50:24.458 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_ where student0_.Id_std=(select registrati1_.Student_id from registration registrati1_ where registrati1_.Level=?)
+[INFO ] 26-04-2023 14:51:29.975 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 26-04-2023 14:51:30.038 [main] Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[INFO ] 26-04-2023 14:51:30.201 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[WARN ] 26-04-2023 14:51:30.315 [main] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 26-04-2023 14:51:30.318 [main] pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://localhost:3306/ATELIER2?createDatabaseIfNotExist=true]
+[INFO ] 26-04-2023 14:51:30.318 [main] pooling - HHH10001001: Connection properties: {password=****, user=abmola}
+[INFO ] 26-04-2023 14:51:30.318 [main] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 26-04-2023 14:51:30.320 [main] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 26-04-2023 14:51:30.409 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB10Dialect
+[INFO ] 26-04-2023 14:51:30.908 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1d6d1d42] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 26-04-2023 14:51:30.929 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[DEBUG] 26-04-2023 14:51:31.081 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:51:31.085 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:51:31.086 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:51:31.171 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_
+[DEBUG] 26-04-2023 14:51:31.187 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:51:31.192 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:51:31.197 [main] SQL - select student_.Id_std, student_.CIN as cin2_1_, student_.FirstName as firstnam3_1_, student_.LastName as lastname4_1_ from student student_ where student_.Id_std=?
+[DEBUG] 26-04-2023 14:51:31.198 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:51:31.203 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:51:31.205 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:51:31.252 [main] SQL - select student_.Id_std, student_.CIN as cin2_1_, student_.FirstName as firstnam3_1_, student_.LastName as lastname4_1_ from student student_ where student_.Id_std=?
+[DEBUG] 26-04-2023 14:51:31.253 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:51:31.272 [main] SQL - select registrati0_.Id_reg as id_reg1_0_, registrati0_.Grouped as grouped2_0_, registrati0_.Level as level3_0_, registrati0_.Major as major4_0_, registrati0_.RegDate as regdate5_0_, registrati0_.Student_id as student_6_0_ from registration registrati0_ where registrati0_.Student_id=?
+[DEBUG] 26-04-2023 14:51:31.278 [main] SQL - select registrati0_.Id_reg as id_reg1_0_, registrati0_.Grouped as grouped2_0_, registrati0_.Level as level3_0_, registrati0_.Major as major4_0_, registrati0_.RegDate as regdate5_0_, registrati0_.Student_id as student_6_0_ from registration registrati0_ where registrati0_.Student_id=?
+[DEBUG] 26-04-2023 14:51:31.282 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:51:31.285 [main] SQL - select re0_.Student_id as student_6_0_0_, re0_.Id_reg as id_reg1_0_0_, re0_.Id_reg as id_reg1_0_1_, re0_.Grouped as grouped2_0_1_, re0_.Level as level3_0_1_, re0_.Major as major4_0_1_, re0_.RegDate as regdate5_0_1_, re0_.Student_id as student_6_0_1_ from registration re0_ where re0_.Student_id=?
+[DEBUG] 26-04-2023 14:51:31.290 [main] SQL - delete from student where Id_std=?
+[DEBUG] 26-04-2023 14:51:31.305 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:51:31.307 [main] SQL - update student set CIN=?, FirstName=?, LastName=? where Id_std=?
+[DEBUG] 26-04-2023 14:51:31.316 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_ where student0_.Id_std=(select registrati1_.Student_id from registration registrati1_ where registrati1_.Level=?)
+[DEBUG] 26-04-2023 14:51:31.317 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_ where student0_.Id_std=(select registrati1_.Student_id from registration registrati1_ where registrati1_.Level=?)
+[INFO ] 26-04-2023 14:54:22.281 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 26-04-2023 14:54:22.327 [main] Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[INFO ] 26-04-2023 14:54:22.476 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[WARN ] 26-04-2023 14:54:22.632 [main] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 26-04-2023 14:54:22.635 [main] pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://localhost:3306/ATELIER2?createDatabaseIfNotExist=true]
+[INFO ] 26-04-2023 14:54:22.636 [main] pooling - HHH10001001: Connection properties: {password=****, user=abmola}
+[INFO ] 26-04-2023 14:54:22.636 [main] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 26-04-2023 14:54:22.638 [main] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 26-04-2023 14:54:22.719 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB10Dialect
+[DEBUG] 26-04-2023 14:54:23.223 [main] SQL - alter table registration drop foreign key if exists FK25ucw75sqymkkwjugi3pu0nar
+[INFO ] 26-04-2023 14:54:23.225 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@59c70ceb] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 14:54:23.519 [main] SQL - drop table if exists registration
+[DEBUG] 26-04-2023 14:54:23.630 [main] SQL - drop table if exists student
+[DEBUG] 26-04-2023 14:54:23.801 [main] SQL - create table registration (Id_reg bigint not null auto_increment, Grouped varchar(30), Level varchar(30), Major varchar(30), RegDate datetime(6), Student_id bigint, primary key (Id_reg)) engine=InnoDB
+[INFO ] 26-04-2023 14:54:23.802 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7219ac49] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 14:54:23.997 [main] SQL - create table student (Id_std bigint not null, CIN varchar(20), FirstName varchar(20), LastName varchar(20), primary key (Id_std)) engine=InnoDB
+[DEBUG] 26-04-2023 14:54:24.186 [main] SQL - alter table registration add constraint FK25ucw75sqymkkwjugi3pu0nar foreign key (Student_id) references student (Id_std)
+[INFO ] 26-04-2023 14:54:24.623 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[DEBUG] 26-04-2023 14:54:24.757 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:54:24.765 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:54:24.766 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:54:24.808 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_
+[DEBUG] 26-04-2023 14:54:24.826 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:54:24.834 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:54:24.840 [main] SQL - select student_.Id_std, student_.CIN as cin2_1_, student_.FirstName as firstnam3_1_, student_.LastName as lastname4_1_ from student student_ where student_.Id_std=?
+[DEBUG] 26-04-2023 14:54:24.842 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:54:24.857 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:54:24.859 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:54:24.860 [main] SQL - select student_.Id_std, student_.CIN as cin2_1_, student_.FirstName as firstnam3_1_, student_.LastName as lastname4_1_ from student student_ where student_.Id_std=?
+[DEBUG] 26-04-2023 14:54:24.861 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:54:24.919 [main] SQL - select registrati0_.Id_reg as id_reg1_0_, registrati0_.Grouped as grouped2_0_, registrati0_.Level as level3_0_, registrati0_.Major as major4_0_, registrati0_.RegDate as regdate5_0_, registrati0_.Student_id as student_6_0_ from registration registrati0_ where registrati0_.Student_id=?
+[DEBUG] 26-04-2023 14:54:24.924 [main] SQL - select registrati0_.Id_reg as id_reg1_0_, registrati0_.Grouped as grouped2_0_, registrati0_.Level as level3_0_, registrati0_.Major as major4_0_, registrati0_.RegDate as regdate5_0_, registrati0_.Student_id as student_6_0_ from registration registrati0_ where registrati0_.Student_id=?
+[DEBUG] 26-04-2023 14:54:24.929 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:54:24.933 [main] SQL - select re0_.Student_id as student_6_0_0_, re0_.Id_reg as id_reg1_0_0_, re0_.Id_reg as id_reg1_0_1_, re0_.Grouped as grouped2_0_1_, re0_.Level as level3_0_1_, re0_.Major as major4_0_1_, re0_.RegDate as regdate5_0_1_, re0_.Student_id as student_6_0_1_ from registration re0_ where re0_.Student_id=?
+[DEBUG] 26-04-2023 14:54:24.937 [main] SQL - delete from student where Id_std=?
+[DEBUG] 26-04-2023 14:54:24.957 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:54:24.958 [main] SQL - update student set CIN=?, FirstName=?, LastName=? where Id_std=?
+[DEBUG] 26-04-2023 14:54:24.967 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_ where student0_.Id_std in (select registrati1_.Student_id from registration registrati1_ where registrati1_.Level=?)
+[DEBUG] 26-04-2023 14:54:24.969 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_ where student0_.Id_std in (select registrati1_.Student_id from registration registrati1_ where registrati1_.Level=?)
+[INFO ] 26-04-2023 14:54:55.278 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 26-04-2023 14:54:55.324 [main] Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[INFO ] 26-04-2023 14:54:55.484 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[WARN ] 26-04-2023 14:54:55.632 [main] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 26-04-2023 14:54:55.635 [main] pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://localhost:3306/ATELIER2?createDatabaseIfNotExist=true]
+[INFO ] 26-04-2023 14:54:55.635 [main] pooling - HHH10001001: Connection properties: {password=****, user=abmola}
+[INFO ] 26-04-2023 14:54:55.636 [main] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 26-04-2023 14:54:55.638 [main] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 26-04-2023 14:54:55.759 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB10Dialect
+[DEBUG] 26-04-2023 14:54:56.266 [main] SQL - alter table registration drop foreign key if exists FK25ucw75sqymkkwjugi3pu0nar
+[INFO ] 26-04-2023 14:54:56.268 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@59c70ceb] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[WARN ] 26-04-2023 14:54:56.269 [main] ExceptionHandlerLoggedImpl - GenerationTarget encountered exception accepting command : Error executing DDL "alter table registration drop foreign key if exists FK25ucw75sqymkkwjugi3pu0nar" via JDBC Statement
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table registration drop foreign key if exists FK25ucw75sqymkkwjugi3pu0nar" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:375) [hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:359) [hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:331) [hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:230) [hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:154) [hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:126) [hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:112) [hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:153) [hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:81) [hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:327) [hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471) [hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498) [hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.jpa.HibernatePersistenceProvider.createEntityManagerFactory(HibernatePersistenceProvider.java:56) [hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:79) [javax.persistence-api-2.2.jar:2.2]
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:54) [javax.persistence-api-2.2.jar:2.2]
+	at com.ynabouzi.atelier2.manager.EntityManagerHelper.<clinit>(EntityManagerHelper.java:10) [classes/:?]
+	at com.ynabouzi.atelier2.controllers.StudentDAO.CreateAll(StudentDAO.java:20) [classes/:?]
+	at com.ynabouzi.atelier2.main.main(main.java:31) [classes/:?]
+Caused by: java.sql.SQLSyntaxErrorException: (conn=102) Table 'ATELIER2.registration' doesn't exist
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:282) ~[mariadb-java-client-3.1.2.jar:?]
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:370) ~[mariadb-java-client-3.1.2.jar:?]
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:134) ~[mariadb-java-client-3.1.2.jar:?]
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:855) ~[mariadb-java-client-3.1.2.jar:?]
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:794) ~[mariadb-java-client-3.1.2.jar:?]
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:713) ~[mariadb-java-client-3.1.2.jar:?]
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:637) ~[mariadb-java-client-3.1.2.jar:?]
+	at org.mariadb.jdbc.Statement.executeInternal(Statement.java:941) ~[mariadb-java-client-3.1.2.jar:?]
+	at org.mariadb.jdbc.Statement.execute(Statement.java:1067) ~[mariadb-java-client-3.1.2.jar:?]
+	at org.mariadb.jdbc.Statement.execute(Statement.java:458) ~[mariadb-java-client-3.1.2.jar:?]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	... 18 more
+[DEBUG] 26-04-2023 14:54:56.279 [main] SQL - drop table if exists registration
+[DEBUG] 26-04-2023 14:54:56.368 [main] SQL - drop table if exists student
+[DEBUG] 26-04-2023 14:54:56.435 [main] SQL - create table registration (Id_reg bigint not null auto_increment, Grouped varchar(30), Level varchar(30), Major varchar(30), RegDate datetime(6), Student_id bigint, primary key (Id_reg)) engine=InnoDB
+[INFO ] 26-04-2023 14:54:56.436 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@53ed80d3] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 14:54:56.576 [main] SQL - create table student (Id_std bigint not null, CIN varchar(20), FirstName varchar(20), LastName varchar(20), primary key (Id_std)) engine=InnoDB
+[DEBUG] 26-04-2023 14:54:56.777 [main] SQL - alter table registration add constraint FK25ucw75sqymkkwjugi3pu0nar foreign key (Student_id) references student (Id_std)
+[INFO ] 26-04-2023 14:54:57.246 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[DEBUG] 26-04-2023 14:54:57.416 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:54:57.423 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:54:57.424 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:54:58.284 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_
+[DEBUG] 26-04-2023 14:54:58.303 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:54:58.308 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:54:58.313 [main] SQL - select student_.Id_std, student_.CIN as cin2_1_, student_.FirstName as firstnam3_1_, student_.LastName as lastname4_1_ from student student_ where student_.Id_std=?
+[DEBUG] 26-04-2023 14:54:58.315 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:54:58.373 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:54:58.374 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:54:58.375 [main] SQL - select student_.Id_std, student_.CIN as cin2_1_, student_.FirstName as firstnam3_1_, student_.LastName as lastname4_1_ from student student_ where student_.Id_std=?
+[DEBUG] 26-04-2023 14:54:58.376 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:54:58.403 [main] SQL - select registrati0_.Id_reg as id_reg1_0_, registrati0_.Grouped as grouped2_0_, registrati0_.Level as level3_0_, registrati0_.Major as major4_0_, registrati0_.RegDate as regdate5_0_, registrati0_.Student_id as student_6_0_ from registration registrati0_ where registrati0_.Student_id=?
+[DEBUG] 26-04-2023 14:54:58.411 [main] SQL - select registrati0_.Id_reg as id_reg1_0_, registrati0_.Grouped as grouped2_0_, registrati0_.Level as level3_0_, registrati0_.Major as major4_0_, registrati0_.RegDate as regdate5_0_, registrati0_.Student_id as student_6_0_ from registration registrati0_ where registrati0_.Student_id=?
+[DEBUG] 26-04-2023 14:54:58.417 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:54:58.421 [main] SQL - select re0_.Student_id as student_6_0_0_, re0_.Id_reg as id_reg1_0_0_, re0_.Id_reg as id_reg1_0_1_, re0_.Grouped as grouped2_0_1_, re0_.Level as level3_0_1_, re0_.Major as major4_0_1_, re0_.RegDate as regdate5_0_1_, re0_.Student_id as student_6_0_1_ from registration re0_ where re0_.Student_id=?
+[DEBUG] 26-04-2023 14:54:58.430 [main] SQL - delete from student where Id_std=?
+[DEBUG] 26-04-2023 14:54:58.447 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:54:58.451 [main] SQL - update student set CIN=?, FirstName=?, LastName=? where Id_std=?
+[DEBUG] 26-04-2023 14:54:58.460 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_ where student0_.Id_std in (select registrati1_.Student_id from registration registrati1_ where registrati1_.Level=?)
+[DEBUG] 26-04-2023 14:54:58.463 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_ where student0_.Id_std in (select registrati1_.Student_id from registration registrati1_ where registrati1_.Level=?)
+[INFO ] 26-04-2023 14:55:19.325 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 26-04-2023 14:55:19.366 [main] Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[INFO ] 26-04-2023 14:55:19.540 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[WARN ] 26-04-2023 14:55:19.667 [main] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 26-04-2023 14:55:19.670 [main] pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://localhost:3306/ATELIER2?createDatabaseIfNotExist=true]
+[INFO ] 26-04-2023 14:55:19.670 [main] pooling - HHH10001001: Connection properties: {password=****, user=abmola}
+[INFO ] 26-04-2023 14:55:19.671 [main] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 26-04-2023 14:55:19.672 [main] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 26-04-2023 14:55:19.752 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB10Dialect
+[DEBUG] 26-04-2023 14:55:20.243 [main] SQL - alter table registration drop foreign key if exists FK25ucw75sqymkkwjugi3pu0nar
+[INFO ] 26-04-2023 14:55:20.244 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@59c70ceb] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 14:55:20.511 [main] SQL - drop table if exists registration
+[DEBUG] 26-04-2023 14:55:20.677 [main] SQL - drop table if exists student
+[DEBUG] 26-04-2023 14:55:20.790 [main] SQL - create table registration (Id_reg bigint not null auto_increment, Grouped varchar(30), Level varchar(30), Major varchar(30), RegDate datetime(6), Student_id bigint, primary key (Id_reg)) engine=InnoDB
+[INFO ] 26-04-2023 14:55:20.791 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7219ac49] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 14:55:20.977 [main] SQL - create table student (Id_std bigint not null, CIN varchar(20), FirstName varchar(20), LastName varchar(20), primary key (Id_std)) engine=InnoDB
+[DEBUG] 26-04-2023 14:55:21.144 [main] SQL - alter table registration add constraint FK25ucw75sqymkkwjugi3pu0nar foreign key (Student_id) references student (Id_std)
+[INFO ] 26-04-2023 14:55:21.625 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[DEBUG] 26-04-2023 14:55:21.774 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:55:21.781 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:55:21.782 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:55:21.892 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_
+[DEBUG] 26-04-2023 14:55:21.910 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:55:21.919 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:55:21.923 [main] SQL - select student_.Id_std, student_.CIN as cin2_1_, student_.FirstName as firstnam3_1_, student_.LastName as lastname4_1_ from student student_ where student_.Id_std=?
+[DEBUG] 26-04-2023 14:55:21.924 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:55:21.938 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:55:21.940 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:55:21.941 [main] SQL - select student_.Id_std, student_.CIN as cin2_1_, student_.FirstName as firstnam3_1_, student_.LastName as lastname4_1_ from student student_ where student_.Id_std=?
+[DEBUG] 26-04-2023 14:55:21.941 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 14:55:21.950 [main] SQL - select registrati0_.Id_reg as id_reg1_0_, registrati0_.Grouped as grouped2_0_, registrati0_.Level as level3_0_, registrati0_.Major as major4_0_, registrati0_.RegDate as regdate5_0_, registrati0_.Student_id as student_6_0_ from registration registrati0_ where registrati0_.Student_id=?
+[DEBUG] 26-04-2023 14:55:21.955 [main] SQL - select registrati0_.Id_reg as id_reg1_0_, registrati0_.Grouped as grouped2_0_, registrati0_.Level as level3_0_, registrati0_.Major as major4_0_, registrati0_.RegDate as regdate5_0_, registrati0_.Student_id as student_6_0_ from registration registrati0_ where registrati0_.Student_id=?
+[DEBUG] 26-04-2023 14:55:21.959 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:55:21.964 [main] SQL - select re0_.Student_id as student_6_0_0_, re0_.Id_reg as id_reg1_0_0_, re0_.Id_reg as id_reg1_0_1_, re0_.Grouped as grouped2_0_1_, re0_.Level as level3_0_1_, re0_.Major as major4_0_1_, re0_.RegDate as regdate5_0_1_, re0_.Student_id as student_6_0_1_ from registration re0_ where re0_.Student_id=?
+[DEBUG] 26-04-2023 14:55:21.969 [main] SQL - delete from student where Id_std=?
+[DEBUG] 26-04-2023 14:55:21.982 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 14:55:21.984 [main] SQL - update student set CIN=?, FirstName=?, LastName=? where Id_std=?
+[DEBUG] 26-04-2023 14:55:22.004 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_ where student0_.Id_std in (select registrati1_.Student_id from registration registrati1_ where registrati1_.Level=?)
+[DEBUG] 26-04-2023 14:55:22.005 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_ where student0_.Id_std in (select registrati1_.Student_id from registration registrati1_ where registrati1_.Level=?)
+[INFO ] 26-04-2023 16:43:20.474 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 26-04-2023 16:43:20.580 [main] Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[INFO ] 26-04-2023 16:43:20.799 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[WARN ] 26-04-2023 16:43:20.942 [main] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 26-04-2023 16:43:20.944 [main] pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://localhost:3306/ATELIER2?createDatabaseIfNotExist=true]
+[INFO ] 26-04-2023 16:43:20.945 [main] pooling - HHH10001001: Connection properties: {password=****, user=abmola}
+[INFO ] 26-04-2023 16:43:20.945 [main] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 26-04-2023 16:43:20.946 [main] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 26-04-2023 16:43:21.043 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB10Dialect
+[DEBUG] 26-04-2023 16:43:21.647 [main] SQL - alter table registration drop foreign key if exists FK25ucw75sqymkkwjugi3pu0nar
+[INFO ] 26-04-2023 16:43:21.651 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6749fe50] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 16:43:21.938 [main] SQL - drop table if exists registration
+[DEBUG] 26-04-2023 16:43:22.060 [main] SQL - drop table if exists student
+[DEBUG] 26-04-2023 16:43:22.263 [main] SQL - create table registration (Id_reg bigint not null auto_increment, Grouped varchar(30), Level varchar(30), Major varchar(30), RegDate datetime(6), Student_id bigint, primary key (Id_reg)) engine=InnoDB
+[INFO ] 26-04-2023 16:43:22.264 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@257ef9ed] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 16:43:22.426 [main] SQL - create table student (Id_std bigint not null, CIN varchar(20), FirstName varchar(20), LastName varchar(20), primary key (Id_std)) engine=InnoDB
+[DEBUG] 26-04-2023 16:43:22.660 [main] SQL - alter table registration add constraint FK25ucw75sqymkkwjugi3pu0nar foreign key (Student_id) references student (Id_std)
+[INFO ] 26-04-2023 16:43:23.252 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[DEBUG] 26-04-2023 16:43:23.432 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 16:43:23.443 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 16:43:23.444 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[INFO ] 26-04-2023 16:44:05.191 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 26-04-2023 16:44:05.244 [main] Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[INFO ] 26-04-2023 16:44:05.403 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[WARN ] 26-04-2023 16:44:05.547 [main] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 26-04-2023 16:44:05.550 [main] pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://localhost:3306/ATELIER2?createDatabaseIfNotExist=true]
+[INFO ] 26-04-2023 16:44:05.551 [main] pooling - HHH10001001: Connection properties: {password=****, user=abmola}
+[INFO ] 26-04-2023 16:44:05.551 [main] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 26-04-2023 16:44:05.553 [main] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 26-04-2023 16:44:05.661 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB10Dialect
+[DEBUG] 26-04-2023 16:44:06.201 [main] SQL - alter table registration drop foreign key if exists FK25ucw75sqymkkwjugi3pu0nar
+[INFO ] 26-04-2023 16:44:06.203 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@59c70ceb] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 16:44:06.851 [main] SQL - drop table if exists registration
+[DEBUG] 26-04-2023 16:44:06.973 [main] SQL - drop table if exists student
+[DEBUG] 26-04-2023 16:44:07.141 [main] SQL - create table registration (Id_reg bigint not null auto_increment, Grouped varchar(30), Level varchar(30), Major varchar(30), RegDate datetime(6), Student_id bigint, primary key (Id_reg)) engine=InnoDB
+[INFO ] 26-04-2023 16:44:07.142 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7219ac49] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 16:44:07.273 [main] SQL - create table student (Id_std bigint not null, CIN varchar(20), FirstName varchar(20), LastName varchar(20), primary key (Id_std)) engine=InnoDB
+[DEBUG] 26-04-2023 16:44:07.495 [main] SQL - alter table registration add constraint FK25ucw75sqymkkwjugi3pu0nar foreign key (Student_id) references student (Id_std)
+[INFO ] 26-04-2023 16:44:08.044 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[DEBUG] 26-04-2023 16:44:08.177 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 16:44:08.183 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 16:44:08.183 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 16:44:08.232 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_
+[INFO ] 26-04-2023 16:44:25.871 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 26-04-2023 16:44:25.931 [main] Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[INFO ] 26-04-2023 16:44:26.126 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[WARN ] 26-04-2023 16:44:26.260 [main] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 26-04-2023 16:44:26.263 [main] pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://localhost:3306/ATELIER2?createDatabaseIfNotExist=true]
+[INFO ] 26-04-2023 16:44:26.263 [main] pooling - HHH10001001: Connection properties: {password=****, user=abmola}
+[INFO ] 26-04-2023 16:44:26.263 [main] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 26-04-2023 16:44:26.265 [main] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 26-04-2023 16:44:26.365 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB10Dialect
+[DEBUG] 26-04-2023 16:44:26.961 [main] SQL - alter table registration drop foreign key if exists FK25ucw75sqymkkwjugi3pu0nar
+[INFO ] 26-04-2023 16:44:26.962 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@59c70ceb] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 16:44:29.129 [main] SQL - drop table if exists registration
+[DEBUG] 26-04-2023 16:44:29.251 [main] SQL - drop table if exists student
+[DEBUG] 26-04-2023 16:44:29.410 [main] SQL - create table registration (Id_reg bigint not null auto_increment, Grouped varchar(30), Level varchar(30), Major varchar(30), RegDate datetime(6), Student_id bigint, primary key (Id_reg)) engine=InnoDB
+[INFO ] 26-04-2023 16:44:29.411 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7219ac49] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 16:44:29.982 [main] SQL - create table student (Id_std bigint not null, CIN varchar(20), FirstName varchar(20), LastName varchar(20), primary key (Id_std)) engine=InnoDB
+[DEBUG] 26-04-2023 16:44:30.196 [main] SQL - alter table registration add constraint FK25ucw75sqymkkwjugi3pu0nar foreign key (Student_id) references student (Id_std)
+[INFO ] 26-04-2023 16:44:30.611 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[DEBUG] 26-04-2023 16:44:30.773 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 16:44:30.780 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 16:44:30.781 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 16:44:30.878 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_
+[INFO ] 26-04-2023 16:46:04.901 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 26-04-2023 16:46:05.062 [main] Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[INFO ] 26-04-2023 16:46:05.372 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[WARN ] 26-04-2023 16:46:05.506 [main] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 26-04-2023 16:46:05.510 [main] pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://localhost:3306/ATELIER2?createDatabaseIfNotExist=true]
+[INFO ] 26-04-2023 16:46:05.511 [main] pooling - HHH10001001: Connection properties: {password=****, user=abmola}
+[INFO ] 26-04-2023 16:46:05.511 [main] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 26-04-2023 16:46:05.514 [main] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 26-04-2023 16:46:05.628 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB10Dialect
+[DEBUG] 26-04-2023 16:46:06.237 [main] SQL - alter table registration drop foreign key if exists FK25ucw75sqymkkwjugi3pu0nar
+[INFO ] 26-04-2023 16:46:06.239 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7c52fc81] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 16:46:06.466 [main] SQL - drop table if exists registration
+[DEBUG] 26-04-2023 16:46:06.610 [main] SQL - drop table if exists student
+[DEBUG] 26-04-2023 16:46:06.713 [main] SQL - create table registration (Id_reg bigint not null auto_increment, Grouped varchar(30), Level varchar(30), Major varchar(30), RegDate datetime(6), Student_id bigint, primary key (Id_reg)) engine=InnoDB
+[INFO ] 26-04-2023 16:46:06.714 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2a53f215] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 16:46:06.888 [main] SQL - create table student (Id_std bigint not null, CIN varchar(20), FirstName varchar(20), LastName varchar(20), primary key (Id_std)) engine=InnoDB
+[DEBUG] 26-04-2023 16:46:07.021 [main] SQL - alter table registration add constraint FK25ucw75sqymkkwjugi3pu0nar foreign key (Student_id) references student (Id_std)
+[INFO ] 26-04-2023 16:46:07.451 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[DEBUG] 26-04-2023 16:46:07.640 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 16:46:07.649 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 16:46:07.650 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 16:46:07.770 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_
+[DEBUG] 26-04-2023 16:46:07.786 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 16:46:07.791 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 16:46:07.795 [main] SQL - select student_.Id_std, student_.CIN as cin2_1_, student_.FirstName as firstnam3_1_, student_.LastName as lastname4_1_ from student student_ where student_.Id_std=?
+[DEBUG] 26-04-2023 16:46:07.796 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 16:46:07.808 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 16:46:07.810 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 16:46:07.810 [main] SQL - select student_.Id_std, student_.CIN as cin2_1_, student_.FirstName as firstnam3_1_, student_.LastName as lastname4_1_ from student student_ where student_.Id_std=?
+[DEBUG] 26-04-2023 16:46:07.811 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 16:46:07.819 [main] SQL - select registrati0_.Id_reg as id_reg1_0_, registrati0_.Grouped as grouped2_0_, registrati0_.Level as level3_0_, registrati0_.Major as major4_0_, registrati0_.RegDate as regdate5_0_, registrati0_.Student_id as student_6_0_ from registration registrati0_ where registrati0_.Student_id=?
+[DEBUG] 26-04-2023 16:46:07.824 [main] SQL - select registrati0_.Id_reg as id_reg1_0_, registrati0_.Grouped as grouped2_0_, registrati0_.Level as level3_0_, registrati0_.Major as major4_0_, registrati0_.RegDate as regdate5_0_, registrati0_.Student_id as student_6_0_ from registration registrati0_ where registrati0_.Student_id=?
+[INFO ] 26-04-2023 16:46:23.432 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 26-04-2023 16:46:23.464 [main] Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[INFO ] 26-04-2023 16:46:23.578 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[WARN ] 26-04-2023 16:46:23.691 [main] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 26-04-2023 16:46:23.693 [main] pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://localhost:3306/ATELIER2?createDatabaseIfNotExist=true]
+[INFO ] 26-04-2023 16:46:23.693 [main] pooling - HHH10001001: Connection properties: {password=****, user=abmola}
+[INFO ] 26-04-2023 16:46:23.694 [main] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 26-04-2023 16:46:23.695 [main] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 26-04-2023 16:46:23.767 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB10Dialect
+[DEBUG] 26-04-2023 16:46:24.210 [main] SQL - alter table registration drop foreign key if exists FK25ucw75sqymkkwjugi3pu0nar
+[INFO ] 26-04-2023 16:46:24.212 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7c52fc81] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 16:46:24.400 [main] SQL - drop table if exists registration
+[DEBUG] 26-04-2023 16:46:24.555 [main] SQL - drop table if exists student
+[DEBUG] 26-04-2023 16:46:24.658 [main] SQL - create table registration (Id_reg bigint not null auto_increment, Grouped varchar(30), Level varchar(30), Major varchar(30), RegDate datetime(6), Student_id bigint, primary key (Id_reg)) engine=InnoDB
+[INFO ] 26-04-2023 16:46:24.658 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2a53f215] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 16:46:24.855 [main] SQL - create table student (Id_std bigint not null, CIN varchar(20), FirstName varchar(20), LastName varchar(20), primary key (Id_std)) engine=InnoDB
+[DEBUG] 26-04-2023 16:46:24.989 [main] SQL - alter table registration add constraint FK25ucw75sqymkkwjugi3pu0nar foreign key (Student_id) references student (Id_std)
+[INFO ] 26-04-2023 16:46:25.464 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[DEBUG] 26-04-2023 16:46:25.640 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 16:46:25.646 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 16:46:25.647 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 16:46:25.746 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_
+[INFO ] 26-04-2023 16:46:31.585 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 26-04-2023 16:46:31.618 [main] Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[INFO ] 26-04-2023 16:46:31.754 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[WARN ] 26-04-2023 16:46:31.858 [main] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 26-04-2023 16:46:31.860 [main] pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://localhost:3306/ATELIER2?createDatabaseIfNotExist=true]
+[INFO ] 26-04-2023 16:46:31.860 [main] pooling - HHH10001001: Connection properties: {password=****, user=abmola}
+[INFO ] 26-04-2023 16:46:31.860 [main] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 26-04-2023 16:46:31.862 [main] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 26-04-2023 16:46:31.928 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB10Dialect
+[DEBUG] 26-04-2023 16:46:32.353 [main] SQL - alter table registration drop foreign key if exists FK25ucw75sqymkkwjugi3pu0nar
+[INFO ] 26-04-2023 16:46:32.355 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7c52fc81] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 16:46:32.578 [main] SQL - drop table if exists registration
+[DEBUG] 26-04-2023 16:46:32.755 [main] SQL - drop table if exists student
+[DEBUG] 26-04-2023 16:46:32.858 [main] SQL - create table registration (Id_reg bigint not null auto_increment, Grouped varchar(30), Level varchar(30), Major varchar(30), RegDate datetime(6), Student_id bigint, primary key (Id_reg)) engine=InnoDB
+[INFO ] 26-04-2023 16:46:32.858 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2a53f215] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 16:46:33.011 [main] SQL - create table student (Id_std bigint not null, CIN varchar(20), FirstName varchar(20), LastName varchar(20), primary key (Id_std)) engine=InnoDB
+[DEBUG] 26-04-2023 16:46:33.223 [main] SQL - alter table registration add constraint FK25ucw75sqymkkwjugi3pu0nar foreign key (Student_id) references student (Id_std)
+[INFO ] 26-04-2023 16:46:33.658 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[DEBUG] 26-04-2023 16:46:33.885 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 16:46:33.891 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 16:46:33.892 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 16:46:37.913 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_
+[DEBUG] 26-04-2023 16:46:40.509 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 16:46:40.521 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 16:46:40.526 [main] SQL - select student_.Id_std, student_.CIN as cin2_1_, student_.FirstName as firstnam3_1_, student_.LastName as lastname4_1_ from student student_ where student_.Id_std=?
+[DEBUG] 26-04-2023 16:46:40.528 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 16:46:40.566 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 16:46:40.567 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 16:46:40.568 [main] SQL - select student_.Id_std, student_.CIN as cin2_1_, student_.FirstName as firstnam3_1_, student_.LastName as lastname4_1_ from student student_ where student_.Id_std=?
+[DEBUG] 26-04-2023 16:46:40.569 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 16:46:40.576 [main] SQL - select registrati0_.Id_reg as id_reg1_0_, registrati0_.Grouped as grouped2_0_, registrati0_.Level as level3_0_, registrati0_.Major as major4_0_, registrati0_.RegDate as regdate5_0_, registrati0_.Student_id as student_6_0_ from registration registrati0_ where registrati0_.Student_id=?
+[DEBUG] 26-04-2023 16:46:40.582 [main] SQL - select registrati0_.Id_reg as id_reg1_0_, registrati0_.Grouped as grouped2_0_, registrati0_.Level as level3_0_, registrati0_.Major as major4_0_, registrati0_.RegDate as regdate5_0_, registrati0_.Student_id as student_6_0_ from registration registrati0_ where registrati0_.Student_id=?
+[DEBUG] 26-04-2023 16:46:41.964 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 16:46:41.969 [main] SQL - select re0_.Student_id as student_6_0_0_, re0_.Id_reg as id_reg1_0_0_, re0_.Id_reg as id_reg1_0_1_, re0_.Grouped as grouped2_0_1_, re0_.Level as level3_0_1_, re0_.Major as major4_0_1_, re0_.RegDate as regdate5_0_1_, re0_.Student_id as student_6_0_1_ from registration re0_ where re0_.Student_id=?
+[DEBUG] 26-04-2023 16:46:41.977 [main] SQL - delete from student where Id_std=?
+[DEBUG] 26-04-2023 16:46:42.994 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 16:46:42.998 [main] SQL - update student set CIN=?, FirstName=?, LastName=? where Id_std=?
+[DEBUG] 26-04-2023 16:46:43.924 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_ where student0_.Id_std in (select registrati1_.Student_id from registration registrati1_ where registrati1_.Level=?)
+[DEBUG] 26-04-2023 16:46:43.929 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_ where student0_.Id_std in (select registrati1_.Student_id from registration registrati1_ where registrati1_.Level=?)
+[INFO ] 26-04-2023 16:47:04.614 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 26-04-2023 16:47:04.657 [main] Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[INFO ] 26-04-2023 16:47:04.812 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[WARN ] 26-04-2023 16:47:04.993 [main] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 26-04-2023 16:47:04.998 [main] pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://localhost:3306/ATELIER2?createDatabaseIfNotExist=true]
+[INFO ] 26-04-2023 16:47:04.999 [main] pooling - HHH10001001: Connection properties: {password=****, user=abmola}
+[INFO ] 26-04-2023 16:47:04.999 [main] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 26-04-2023 16:47:05.002 [main] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 26-04-2023 16:47:05.098 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB10Dialect
+[DEBUG] 26-04-2023 16:47:05.791 [main] SQL - alter table registration drop foreign key if exists FK25ucw75sqymkkwjugi3pu0nar
+[INFO ] 26-04-2023 16:47:05.792 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7c52fc81] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 16:47:06.123 [main] SQL - drop table if exists registration
+[DEBUG] 26-04-2023 16:47:06.223 [main] SQL - drop table if exists student
+[DEBUG] 26-04-2023 16:47:06.327 [main] SQL - create table registration (Id_reg bigint not null auto_increment, Grouped varchar(30), Level varchar(30), Major varchar(30), RegDate datetime(6), Student_id bigint, primary key (Id_reg)) engine=InnoDB
+[INFO ] 26-04-2023 16:47:06.328 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2a53f215] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 16:47:06.501 [main] SQL - create table student (Id_std bigint not null, CIN varchar(20), FirstName varchar(20), LastName varchar(20), primary key (Id_std)) engine=InnoDB
+[DEBUG] 26-04-2023 16:47:06.645 [main] SQL - alter table registration add constraint FK25ucw75sqymkkwjugi3pu0nar foreign key (Student_id) references student (Id_std)
+[INFO ] 26-04-2023 16:47:07.040 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[DEBUG] 26-04-2023 16:47:07.211 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 16:47:07.220 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 16:47:07.221 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 16:47:17.233 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_
+[DEBUG] 26-04-2023 16:47:22.126 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 16:47:22.131 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 16:47:22.135 [main] SQL - select student_.Id_std, student_.CIN as cin2_1_, student_.FirstName as firstnam3_1_, student_.LastName as lastname4_1_ from student student_ where student_.Id_std=?
+[DEBUG] 26-04-2023 16:47:22.136 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 16:47:22.169 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 16:47:22.170 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 16:47:22.172 [main] SQL - select student_.Id_std, student_.CIN as cin2_1_, student_.FirstName as firstnam3_1_, student_.LastName as lastname4_1_ from student student_ where student_.Id_std=?
+[DEBUG] 26-04-2023 16:47:22.173 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 16:47:22.179 [main] SQL - select registrati0_.Id_reg as id_reg1_0_, registrati0_.Grouped as grouped2_0_, registrati0_.Level as level3_0_, registrati0_.Major as major4_0_, registrati0_.RegDate as regdate5_0_, registrati0_.Student_id as student_6_0_ from registration registrati0_ where registrati0_.Student_id=?
+[DEBUG] 26-04-2023 16:47:22.186 [main] SQL - select registrati0_.Id_reg as id_reg1_0_, registrati0_.Grouped as grouped2_0_, registrati0_.Level as level3_0_, registrati0_.Major as major4_0_, registrati0_.RegDate as regdate5_0_, registrati0_.Student_id as student_6_0_ from registration registrati0_ where registrati0_.Student_id=?
+[DEBUG] 26-04-2023 16:47:32.768 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 16:47:32.773 [main] SQL - select re0_.Student_id as student_6_0_0_, re0_.Id_reg as id_reg1_0_0_, re0_.Id_reg as id_reg1_0_1_, re0_.Grouped as grouped2_0_1_, re0_.Level as level3_0_1_, re0_.Major as major4_0_1_, re0_.RegDate as regdate5_0_1_, re0_.Student_id as student_6_0_1_ from registration re0_ where re0_.Student_id=?
+[DEBUG] 26-04-2023 16:47:32.779 [main] SQL - delete from student where Id_std=?
+[DEBUG] 26-04-2023 16:47:46.175 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 16:47:46.177 [main] SQL - update student set CIN=?, FirstName=?, LastName=? where Id_std=?
+[DEBUG] 26-04-2023 16:47:46.276 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_ where student0_.Id_std in (select registrati1_.Student_id from registration registrati1_ where registrati1_.Level=?)
+[DEBUG] 26-04-2023 16:47:46.278 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_ where student0_.Id_std in (select registrati1_.Student_id from registration registrati1_ where registrati1_.Level=?)
+[INFO ] 26-04-2023 18:16:29.443 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 26-04-2023 18:16:29.474 [main] Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[INFO ] 26-04-2023 18:16:29.603 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[WARN ] 26-04-2023 18:16:29.750 [main] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 26-04-2023 18:16:29.753 [main] pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://localhost:3306/ATELIER2?createDatabaseIfNotExist=true]
+[INFO ] 26-04-2023 18:16:29.754 [main] pooling - HHH10001001: Connection properties: {password=****, user=abmola}
+[INFO ] 26-04-2023 18:16:29.754 [main] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 26-04-2023 18:16:29.757 [main] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 26-04-2023 18:16:29.843 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB10Dialect
+[DEBUG] 26-04-2023 18:16:30.305 [main] SQL - alter table registration drop foreign key if exists FK25ucw75sqymkkwjugi3pu0nar
+[INFO ] 26-04-2023 18:16:30.306 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7c52fc81] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 18:16:30.580 [main] SQL - drop table if exists registration
+[DEBUG] 26-04-2023 18:16:33.301 [main] SQL - drop table if exists student
+[DEBUG] 26-04-2023 18:16:33.560 [main] SQL - create table registration (Id_reg bigint not null auto_increment, Grouped varchar(30), Level varchar(30), Major varchar(30), RegDate datetime(6), Student_id bigint, primary key (Id_reg)) engine=InnoDB
+[INFO ] 26-04-2023 18:16:33.561 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2a53f215] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 26-04-2023 18:16:33.924 [main] SQL - create table student (Id_std bigint not null, CIN varchar(20), FirstName varchar(20), LastName varchar(20), primary key (Id_std)) engine=InnoDB
+[DEBUG] 26-04-2023 18:16:34.469 [main] SQL - alter table registration add constraint FK25ucw75sqymkkwjugi3pu0nar foreign key (Student_id) references student (Id_std)
+[INFO ] 26-04-2023 18:16:35.817 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[DEBUG] 26-04-2023 18:16:35.938 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 18:16:35.945 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 18:16:35.946 [main] SQL - insert into student (CIN, FirstName, LastName, Id_std) values (?, ?, ?, ?)
+[DEBUG] 26-04-2023 18:16:47.303 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_
+[DEBUG] 26-04-2023 18:16:47.328 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 18:16:47.336 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 18:16:47.341 [main] SQL - select student_.Id_std, student_.CIN as cin2_1_, student_.FirstName as firstnam3_1_, student_.LastName as lastname4_1_ from student student_ where student_.Id_std=?
+[DEBUG] 26-04-2023 18:16:47.342 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 18:16:47.348 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 18:16:47.350 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 18:16:47.351 [main] SQL - select student_.Id_std, student_.CIN as cin2_1_, student_.FirstName as firstnam3_1_, student_.LastName as lastname4_1_ from student student_ where student_.Id_std=?
+[DEBUG] 26-04-2023 18:16:47.351 [main] SQL - insert into registration (Grouped, Level, Major, RegDate, Student_id) values (?, ?, ?, ?, ?)
+[DEBUG] 26-04-2023 18:16:47.381 [main] SQL - select registrati0_.Id_reg as id_reg1_0_, registrati0_.Grouped as grouped2_0_, registrati0_.Level as level3_0_, registrati0_.Major as major4_0_, registrati0_.RegDate as regdate5_0_, registrati0_.Student_id as student_6_0_ from registration registrati0_ where registrati0_.Student_id=?
+[DEBUG] 26-04-2023 18:16:47.386 [main] SQL - select registrati0_.Id_reg as id_reg1_0_, registrati0_.Grouped as grouped2_0_, registrati0_.Level as level3_0_, registrati0_.Major as major4_0_, registrati0_.RegDate as regdate5_0_, registrati0_.Student_id as student_6_0_ from registration registrati0_ where registrati0_.Student_id=?
+[DEBUG] 26-04-2023 18:16:48.365 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 18:16:48.370 [main] SQL - select re0_.Student_id as student_6_0_0_, re0_.Id_reg as id_reg1_0_0_, re0_.Id_reg as id_reg1_0_1_, re0_.Grouped as grouped2_0_1_, re0_.Level as level3_0_1_, re0_.Major as major4_0_1_, re0_.RegDate as regdate5_0_1_, re0_.Student_id as student_6_0_1_ from registration re0_ where re0_.Student_id=?
+[DEBUG] 26-04-2023 18:16:48.375 [main] SQL - delete from student where Id_std=?
+[DEBUG] 26-04-2023 18:16:49.021 [main] SQL - select student0_.Id_std as id_std1_1_0_, student0_.CIN as cin2_1_0_, student0_.FirstName as firstnam3_1_0_, student0_.LastName as lastname4_1_0_ from student student0_ where student0_.Id_std=?
+[DEBUG] 26-04-2023 18:16:49.024 [main] SQL - update student set CIN=?, FirstName=?, LastName=? where Id_std=?
+[DEBUG] 26-04-2023 18:16:49.602 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_ where student0_.Id_std in (select registrati1_.Student_id from registration registrati1_ where registrati1_.Level=?)
+[DEBUG] 26-04-2023 18:16:49.604 [main] SQL - select student0_.Id_std as id_std1_1_, student0_.CIN as cin2_1_, student0_.FirstName as firstnam3_1_, student0_.LastName as lastname4_1_ from student student0_ where student0_.Id_std in (select registrati1_.Student_id from registration registrati1_ where registrati1_.Level=?)

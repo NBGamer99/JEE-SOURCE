@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration</title>
+  <link rel="icon" th:href="@{images/ensalogo.png}" type="image/x-icon">
+  <link rel="stylesheet" th:href="@{css/style.css}">
+</head>
+<body>
+<form th:action="@{/register}" method="POST">
+  <div class="row">
+    <div class="col-left">
+      <img alt="logo" th:src="@{images/ensalogo.png}" id="ensalogo"/>
+      <div class="field-group">
+        <input type="text" id="FirstName" name="FirstName" class="input-field" placeholder="First Name"
+               autocomplete="off" required>
+        <label for="FirstName" class="input-label">First Name</label>
+      </div>
+      <div class="field-group">
+        <input type="text" id="LastName" name="LastName" class="input-field" placeholder="Last Name"
+               autocomplete="off" required>
+        <label for="LastName" class="input-label">Last Name</label>
+      </div>
+      <div class="field-group">
+        <input type="text" id="Email" name="Email" class="input-field" placeholder="Email" autocomplete="off"
+               required>
+        <label for="Email" class="input-label">Email</label>
+      </div>
+      <div class="field-group">
+        <input type="text" id="BirthDate" name="BirthDate" class="input-field" placeholder="Birth Date"
+               autocomplete="off" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'"
+               required>
+        <label for="BirthDate" class="input-label">Birth Date</label>
+      </div>
+      <div class="field-group">
+        <input type="text" id="CIN" name="CIN" class="input-field" placeholder="CIN" autocomplete="off"
+               required>
+        <label for="CIN" class="input-label">CIN</label>
+      </div>
+    </div>
+    <div class="col-right">
+      <h2>Students Registration</h2>
+      <div class="field-group">
+        <input type="text" id="PhoneNumber" name="PhoneNumber" class="input-field" placeholder="Phone Number"
+               autocomplete="off" pattern="[0-9]{10}" required>
+        <label for="PhoneNumber" class="input-label">Phone Number</label>
+      </div>
+      <div class="field-group">
+        <input type="text" id="RegDate" name="RegDate" class="input-field" placeholder="RegDate"
+               autocomplete="off" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'"
+               required>
+        <label for="RegDate" class="input-label">Registration Date</label>
+      </div>
+      <div class="field-group">
+        <input type="text" id="Grouped" name="Grouped" class="input-field" placeholder="Group" autocomplete="off"
+               required>
+        <label for="Grouped" class="input-label">Group</label>
+      </div>
+      <div class="field-group">
+        <select class="select-field" id="Major" name="Major">
+          <option value="" class="option-field"></option>
+          <option value="IID">Informatique et Ingénierie des Données (IID)</option>
+          <option value="IRIC">Ingénierie Réseaux et Télécommunications (IRIC)</option>
+          <option value="GI">Génie Informatique (GI)</option>
+          <option value="GPEE">Génie des Procédés, de l’Energie et de l’Environnement (GPEE)</option>
+          <option value="GE">Génie Electrique (GE)</option>
+        </select>
+        <label for="Major" class="input-label">Major</label>
+      </div>
+      <div class="field-group">
+        <select class="select-field" id="Level" name="Level">
+          <option value="" class="option-field"></option>
+          <option value="1">1er Année</option>
+          <option value="2">2eme Année</option>
+          <option value="3">3eme Année</option>
+          <option value="4">4eme Année</option>
+          <option value="5">5eme Année</option>
+        </select>
+        <label for="Level" class="input-label">Level</label>
+      </div>
+    </div>
+  </div>
+  <button type="submit" value="Submit" id="submit" class="btn">Submit</button>
+</form>
+<div class="error-msg" id="error-msg">Please fill all the fields above.</div>
+<script th:src="@{js/app.js}"></script>
+</body>
+</html>
